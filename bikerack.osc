@@ -1,0 +1,145 @@
+'##############
+'Bike Rack
+'##############
+
+'2015 Darius Bode
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+{macro:bikerack_init}
+	1 (S.L.calc_new)
+	
+	(L.L.bike_init_value) 0 =
+	{if}
+	0 100 random (S.L.rackuse)
+	{endif}
+{end}
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+{macro:bikerack_frame}
+
+(L.L.rackuse) 2 =
+{if}
+	(L.L.bike_init_value) 0 =
+	{if}
+	1 (S.L.bike_init_value)
+	{endif}
+{else}
+	(L.L.bike_init_value) 0 =
+	{if}
+		0 (S.L.rackuse)
+		1 (S.L.bike_init_value)	
+	{endif}
+
+	(L.L.AI) ! (L.L.bike_1) (L.L.bike_2) || ||
+	(L.L.bikerack) &&
+	{if}
+	
+	(L.L.calc_new) 
+	(L.L.bike_1) ! (L.L.bike_2) ! || &&
+	1 (M.V.GetHumanCountOnPathLink) 19 (M.V.GetHumanCountOnPathLink) || &&
+		{if}
+			(L.L.humans_count) (C.L.bike_random) random + (S.L.next_hum)
+			0 (S.L.calc_new)
+		{else}
+'			0 (S.L.calc_new) 
+		{endif}
+	
+	(L.L.humans_count) (L.L.next_hum) >=
+	(L.L.humans_count) 0 > &&
+	(L.L.next_hum) 0 > &&
+		{if}
+			0 1 random s0		
+			
+			l0 0 > 
+				{if}
+					(L.L.bike_2) ! 
+						{if} 
+							1 (S.L.bike_2) (S.L.rackuse)
+							(T.L.ev_bike_2)
+							(L.L.next_hum) (S.L.bike_2_hum)
+							(M.L.new_tex_2)
+						{else}
+							(L.L.bike_1) !
+								{if} 
+									1 (S.L.bike_1) (S.L.rackuse) 
+									(T.L.ev_bike_1)
+									(L.L.next_hum) (S.L.bike_1_hum)
+									(M.L.new_tex_1)
+								{endif}
+						{endif}
+				{else}
+					(L.L.bike_1) ! 
+						{if} 
+							1 (S.L.bike_1) (S.L.rackuse)
+							(T.L.ev_bike_1)
+							(L.L.next_hum) (S.L.bike_1_hum)
+							(M.L.new_tex_1)
+						{else}
+							(L.L.bike_2) !
+								{if} 
+									1 (S.L.bike_2) (S.L.rackuse)
+									(T.L.ev_bike_2)
+									(L.L.next_hum) (S.L.bike_2_hum)
+									(M.L.new_tex_2)
+								{endif}
+						{endif}					
+				{endif}
+				
+			0 (S.L.next_hum) 
+			
+			1 (S.L.calc_new) 
+				
+		{endif}
+		
+		(L.L.humans_count) (L.L.bike_2_hum) < (L.L.bike_2) &&
+			{if}
+				0 (S.L.bike_2) (S.L.bike_2_hum) (S.L.rackuse)
+				1 (S.L.calc_new) 
+				(T.L.ev_bike_off)
+			{endif}
+		
+		(L.L.humans_count) (L.L.bike_1_hum) < (L.L.bike_1) &&
+			{if}
+				0 (S.L.bike_1) (S.L.bike_1_hum) 
+				1 (S.L.calc_new) 
+				(T.L.ev_bike_off)
+			{endif}		
+		
+		(L.L.bike_1) !
+		(L.L.bike_2) ! &&
+		{if}
+			0 (S.L.rackuse)
+		{endif}
+{endif}
+{endif}	
+' ENDE KEIN AI
+		
+{end}
+
+{macro:new_tex_1}
+
+	1 5 random s0
+	
+		l0 1 <= {if} "bike_red.dds" {endif}
+		l0 2 = {if} "bike_blue.dds" {endif}
+		l0 3 = {if} "bike_green.dds" {endif}
+		l0 4 = {if} "bike_grey.dds" {endif}
+		l0 5 >= {if} "bike_yellow.dds" {endif}		
+		
+	 (S.$.bike_1_tex)
+
+{end}
+
+{macro:new_tex_2}
+
+	1 5 random s0
+	
+		l0 1 <= {if} "bike_red.dds" {endif}
+		l0 2 = {if} "bike_blue.dds" {endif}
+		l0 3 = {if} "bike_green.dds" {endif}
+		l0 4 = {if} "bike_grey.dds" {endif}
+		l0 5 >= {if} "bike_yellow.dds" {endif}		
+		
+	 (S.$.bike_2_tex)
+
+{end}
