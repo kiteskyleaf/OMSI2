@@ -906,7 +906,7 @@
 									{if}
 										1 (S.L.clever_LED_mode)
 									{else}	
-										2 (S.L.clever_LED_mode)
+										0 (S.L.clever_LED_mode)
 									{endif}
 								
 							{endif}
