@@ -1,0 +1,786 @@
+[name]
+New John City
+
+[servicetrip]
+Not In Service
+
+	Global strings For compatibility with TTC mod scripts
+	1: Announcement Folder
+	2:
+	3:
+	4: Line based on sign
+
+[global_strings]
+5
+NewJohnCity
+True
+True
+LOCKEDLINE
+RUNSHEET
+																								
+													
+stringcount_terminus
+8
+			
+stringcount_busstop
+4
+													
+												
+	1: Clever Display, 2: Line 3, Page 1, 3: Line 2, Page 2, 4: Line 1, Page 2, 5: Line 2: Page 3, 6: Rear Line, 7: Filename, 8: Line Number
+[addterminus_list]
+{ALLEX}	0	Empty	EMPTY						NIS
+{ALLEX}	0	Not In Service	NOT IN SERVICE	SORRY...   	NOT IN SERVICE				NIS	^
+	0	New John City	NEW JOHN CITY	NEW JOHN CITY				NJC	NJC	^
+	0	SIGN IN	SIGN IN	* SIGN IN *				A3 ME	A3ME	^
+	0	Chartered	CHARTERED	C H A R T E R E D				CHART	CHAR	^
+	0	Training Bus	TRAINING BUS	TRAINING BUS					TRAINING	^
+	0	Special	SPECIAL	S P E C I A L				SPEC	^
+	0	Special Express	SPECIAL	S P E C I A L		E X P R E S S		SPEC	SPEC-EXPRESS	^
+{ALLEX}	0	NIS EXPRESS	NOT IN SERVICE	SORRY...	NOT IN SERVICE	E X P R E S S		RTE	NIS-EXPRESS	
+	0	Line 7 Shuttle Bus	LINE 7	LINE 7 SHUTTLE BUS	SOUTHBOUND			7	Line7-SB	^
+	0	11A Bayview - Bessarion Stn	BAYVIEW	B A Y V I E W	T O  S T E E L E S	B A Y V I E W	via SUNNYBROOK	11A	11A-STEELES	11A
+	0	11B Bayview - Tyndale U	BAYVIEW	B A Y V I E W	TO HUMBER COLLEGE	B A Y V I E W	via SUNNYBROOK	11B	11B-HUMBER	11B
+	0	11C Bayview - Sunnybrook	BAYVIEW	B A Y V I E W	TO SUNNYBROOK HOSPITAL			11C	11C-SUNNYBROOK	11C
+	0	11A Bayview - Davisville Stn	BAYVIEW	B A Y V I E W	TO DAVISVILLE STN	B A Y V I E W	via SUNNYBROOK	11	11A-DAVISVILLE	11
+	0	11C Bayview - Davisville Stn	BAYVIEW	B A Y V I E W	TO DAVISVILLE STN			11	11C-DAVISVILLE	11
+	0	11S Bayview - Short Turn	BAYVIEW	B A Y V I E W	SHORT TURN			11S	11S-NJC	11S
+	0	11S Bayview - Finch	BAYVIEW	B A Y V I E W	SHORT TURN	B A Y V I E W	FINCH via SUNNYBROOK	11S	11S-FINCH	11S
+	0	17A Birchmount - Finch	BIRCHMOUNT	BIRCHMOUNT	T O  F I N C H	BIRCHMOUNT	and PROGRESS	17A	17A-FINCH	17A
+	0	17B Birchmount - Steeles	BIRCHMOUNT	BIRCHMOUNT	TO STEELES		via WINTERMUTE	17B	17B	17B
+	0	17C Birchmount - Steeles	BIRCHMOUNT	BIRCHMOUNT	TO STEELES	BIRCHMOUNT	via NORFINCH	17C	17C	17C
+	0	17 Birchmount - Dupont Stn	BIRCHMOUNT	BIRCHMOUNT	TO DUPONT STN			17	17	17
+	0	25 Brandon Mills - Steeles	BRANDON MILLS	BRANDON MILLS	TO STEELES			25	25-STEELES	25
+	0	25 Brandon Mills - Pape	BRANDON MILLS	BRANDON MILLS	TO PAPE STN			25	25-PAPESTN	25
+	0	28 Maplewood - DVB	MAPLEWOOD	MAPLEWOOD	DON VALLEY BRICKWORKS	MAPLEWOOD	via HOSPITAL	28	28-DVB	28 Maplewood
+	0	28 Maplewood - DVP	MAPLEWOOD	MAPLEWOOD	DON VALLEY PARKWAY	MAPLEWOOD	via HOSPITAL	28	28-DVP	28 Maplewood
+	0	32D Eglinton West - Kennedy	EGLINTON W	EGLINTON WEST	TO FINCH & KENNEDY	EGLINTON WEST	via BASALTIC RD	32D	32D-FINCH	32D
+	0	32D Eglinton West - Weekend	EGLINTON W	EGLINTON WEST	TO FINCH & KENNEDY	EGLINTON WEST	via BENNETT FARM	32D	32D-FINCHWKND	32D
+	0	32 Eglinton West - Yonge	EGLINTON W	EGLINTON WEST	TO YONGE ST			32	32-YONGE	32
+	0	32 Eglinton West - Thorncliffe	EGLINTON W	EGLINTON WEST	TO YONGE ST	EGLINTON WEST	and THORNCLIFFE	32	32-THORNCLIFFE	32
+	0	32D Eglinton West - Yonge	EGLINTON W	EGLINTON WEST	TO YONGE ST	EGLINTON WEST	via BASALTIC RD	32	32D-YONGE	32
+	0	32D Eglinton West - Yonge Wknd	EGLINTON W	EGLINTON WEST	TO YONGE ST	EGLINTON WEST	via BENNETT FARM	32D	32D-YONGEWKND	32
+	0	36A Finch West - Humewood	FINCH WEST	FINCH WEST	TO HUMEWOOD			36A	36A	36A
+	0	36B Finch West - Hilda	FINCH WEST	FINCH WEST	TO HILDA			36B	36B-HILDA	36B
+	0	36D Finch West - Belfield	FINCH WEST	FINCH WEST	TO BEAVERBROOK	FINCH WEST	via BELFIELD RD	36D	36D	36D
+	0	36E Finch West - Humewood	FINCH WEST	FINCH WEST	EXPRESS TO	FINCH WEST	HUMEWOOD	36E	36E-HUMEWOOD	36E
+	0	36 Finch West - Yonge Street	FINCH WEST	FINCH WEST	TO YONGE ST			36	36	36
+	0	36E Finch West - Yonge	FINCH WEST	FINCH WEST	EXPRESS	FINCH WEST	TO YONGE STREET	36E	36E-YONGE	36E
+	0	36 Finch West - Sheppard	FINCH WEST	FINCH WEST	TO  Y O N G E	FINCH WEST	and SHEPPARD-YONGE STN	36	36SHEP	36
+	0	36S Finch West	FINCH WEST	FINCH WEST	SHORT TURN			36S	36S		36S
+	0	36S Finch West - Kennedy	FINCH WEST	FINCH WEST	SHORT TURN	FINCH WEST	TO KENNEDY	36S	36S-KENNEDY	36S
+	0	36S Finch West - Heath	FINCH WEST	FINCH WEST	SHORT TURN	FINCH WEST	TO HEATH ST	36S	36S-HEATH	36S
+	0	40 Junction	- Islington	JUNCTION	JUNCTION	TO ISLINGTON			40	40-ISLINGTON
+	0	40 Junction	- Finch	JUNCTION	JUNCTION	TO FINCH			40	40-FINCH
+	0	41 Killer	KILLER	K I L L E R	TO STEELES & KEELE			41	41-STEELES
+	0	41 Killer	KILLER	K I L L E R	TO KILKENNY			41	41-KILKENNY
+	0	42A Cummer - Mabelle	CUMMER	C U M M E R	TO MABELLE	C U M M E R	and LAROSE AVENUE	42A	42A-MAYBELLE	42A
+	0	42B Cummer - Kennedy	CUMMER	C U M M E R	TO KENNEDY			42B	42B-KENNEDY	42B
+	0	42C Cummer - Mt Pleasant	CUMMER	C U M M E R	TO MOUNT PLEASANT			42C	42C-MTPLEASANT	42C
+	0	42 Cummer - Bayview Stn	CUMMER	C U M M E R	TO BAYVIEW STN			42	42-BAYVIEW	42
+	0	42G Cummer - Humber College	CUMMER	C U M M E R	TO TYNDALE UNIVERSITY	C U M M E R	and HUMBER COLLEGE	42G	42G-HUMBER	42G
+	0	42S Cummer	CUMMER	C U M M E R	SHORT TURN			42S	42S	42S
+	0	48 Highway 48 - Station Stn	HWY 48	HIGHWAY 48	TO STATION STN	HIGHWAY 48	via AVENUE RD	48	48-STATION
+	0	48 Highway 48 - Highway 27	HWY 48	HIGHWAY 48	TO HIGHWAY 27			48	48-27
+	0	49 Mill Road - Eringate	MILL RD	M I L L  R D	TO ERINGATE DR			49	49-ERINGATE	49
+	0	49 Mill Road - Kipling Stn	MILL RD	MILL RD	TO KIPLING STN			49	49-SB	49
+	0	56 South Brandonville - Oriole	S BRANDONVILLE	SOUTH BRANDONVILLE	TO ORIOLE PARKWAY	SOUTH BRANDONVILLE	via DONNY STUBBS DR	56	56A-ORIOLE	56
+	0	56 South Brandonville - via KINGSCOURT	S BRANDONVILLE	SOUTH BRANDONVILLE	TO ORIOLE PARKWAY	via DONNY STUBBS DR	and KINGSCOURT	56	56-KINGSCOURT	56
+	0	56A South Brandonville - Beaverbrook	S BRANDONVILLE	SOUTH BRANDONVILLE	TO BEAVERBROOK	SOUTH BRANDONVILLE	via BENETT FARM	56A	56A	56A
+	0	56B South Brandonville - Eglinton	S BRANDONVILLE	SOUTH BRANDONVILLE	TO ORIOLE/EGLINTON	SOUTH BRANDONVILLE	via DONNY STUBBS DR	56B	56B	56B
+	0	56C South Brandonville - Jarrett	S BRANDONVILLE	SOUTH BRANDONVILLE	JARRETT/DOVEHOUSE	SOUTH BRANDONVILLE	via DONNY STUBBS DR	56C	56C	56C
+	0	56D South Brandonville - Welland	S BRANDONVILLE	SOUTH BRANDONVILLE	TO WELLAND			56D	56D	56D
+	0	56G South Brandonville - Oriole GO Station	S BRANDONVILLE	SOUTH BRANDONVILLE	TO ORIOLE GO STN	SOUTH BRANDONVILLE	via DONNY STUBBS DR	56G	56G	56G
+	0	56K South Brandonville - Kingscourt	S BRANDONVILLE	SOUTH BRANDONVILLE	SHORT TURN	SOUTH BRANDONVILLE	TO KINGSCOURT	56S	56K	56S
+	0	56 South Brandonville - Sheppard Stn	S BRANDONVILLE	SOUTH BRANDONVILLE	TO SHEPPARD-YONGE STN	SOUTH BRANDONVILLE	via DONNY STUBBS DR	56	56	56
+	0	56 South Brandonville - Stn via Kingscourt	S BRANDONVILLE	SOUTH BRANDONVILLE	TO SHEPPARD-YONGE STN	via KINGSCOURT	and DONNY STUBBS DR	56	56-viaKING	56
+	0	56X South Brandonville - Sheppard Stn	S BRANDONVILLE	SOUTH BRANDONVILLE	NON-STOP	SOUTH BRANDONVILLE	TO SHEPPARD-YONGE STN	56X	56X	56X
+	0	56S South Brandonville - Short Turn	S BRANDONVILLE	SOUTH BRANDONVILLE	SHORT TURN			56S	56S	56S
+	0	56/117 - Sheppard Stn	SHEPPARD STN	TO ORIOLE GO STN	and SHEPPARD STN	via ORIOLE PKWY	and DONNY STUBBS	56C	56-117	56/117
+	0	59A Canada - Easton	CANADA	C A N A D A	TO EASTON RD	via DENTON/ANSFORD	and BROCKLEY DR	59A	59A-EASTON	59A
+	0	71A Rivermede - Shawn Bee	RIVERMEDE	RIVERMEDE	TO SHAWN BEE	EXTRA FARE REQUIRED	NORTH OF STEELES	71A	71A
+	0	71B Rivermede - Bessarion Stn	RIVERMEDE	RIVERMEDE	TO BESSARION STN			71B	71B
+	0	71 Rivermede - Millwood Terminal	RIVERMEDE	RIVERMEDE	TO MILLWOOD	RIVERMEDE	via BESSARION STN	71	71
+	0	74A Mt Pleasant - Steeles	MT PLEASANT	MT PLEASANT	T O  S T E E L E S			74A	74A	74A
+	0	74B Mt Pleasant - Steeles	MT PLEASANT	MT PLEASANT	TO STEELES	MT PLEASANT	via OAKDALE	74B	74B	74B
+	0	81 Thorncliffe Park - Quail	THORNCLIFFE PARK	THORNCLIFFE PARK	TO QUAIL VALLEY			81	81-QUAIL
+	0	81 Thorncliffe Park - Stn	THORNCLIFFE PARK	THORNCLIFFE PARK	TO SHEPPARD-YONGE STN			81	81-SHEP
+	0	83 Pineway - Silver Star	PINEWAY	PINEWAY	TO SILVER STAR			83	83-SILVERSTAR
+	0	83 Pineway - Centre	PINEWAY	PINEWAY	TO PINEWAY COMMUNITY CTR			83	83-PINEWAY
+	0	84A Sheppard West - Weston Rd	SHEPPARD W	SHEPPARD WEST	TO WESTON RD			84A	84A-WESTON
+	0	84E Sheppard West - Weston Rd	SHEPPARD W	SHEPPARD WEST	EXPRESS	SHEPPARD WEST	TO WESTON RD	84E	84E-WESTON
+	0	84A Sheppard West - Glencairn Stn	SHEPPARD W	SHEPPARD WEST	TO GLENCAIRN STN			84A	84A-GLENCAIRN
+	0	84B Sheppard West - Sheppard W Stn	SHEPPARD W	SHEPPARD WEST	TO SHEPPARD WEST STN			84B	84B-SHEPPARDW
+	0	84E Sheppard West - Sheppard W Stn	SHEPPARD W	SHEPPARD WEST	EXPRESS	SHEPPARD WEST	TO SHEPPARD WEST STN	84E	84E-SHEPPARDW
+	0	85A Sheppard East - Easton Rd	SHEPPARD E	SHEPPARD EAST	TO EASTON RD			85A	85A-EASTON
+	0	85A Sheppard West - Glencairn Stn	SHEPPARD E	SHEPPARD EAST	TO GLENCAIRN STN			85A	85A-GLENCAIRN
+	0	88 Brandonville - Birchmount	BRANDONVILLE	BRANDONVILLE	TO BIRCHMOUNT	BRANDONVILLE	and BRANDON AVE	88A	88-BIRCHMOUNT	88A
+	0	88D Brandonville - Eglinton	BRANDONVILLE	BRANDONVILLE	TO BIRCHMOUNT	BRANDONVILLE	and ORIOLE & EGLINTON	88D	88D	88D
+	0	88 Brandonville - Sheppard Stn	BRANDONVILLE	BRANDONVILLE	TO SHEPPARD-YONGE STN	BRANDONVILLE	via THORNCLIFFE	88	88-SHEP	88
+	0	88S Brandonville - Short Turn	BRANDONVILLE	BRANDONVILLE	SHORT TURN			88S	88S-BRANDONVILLE	88S
+	0	88S Brandonville - Matthew	BRANDONVILLE	BRANDONVILLE	SHORT TURN	BRANDONVILLE	TO MATTHEW AVENUE	88S	88S-MATTHEW	88S
+	0	95A York Mills - York	YORK MILLS	YORK MILLS	T O  Y O R K	YORK MILLS	YONGE	95A	95A
+	0	95B York Mills - Don Mills	YORK MILLS	YORK MILLS	TO DON MILLS			95B	95B
+	0	95E York Mills - York Terminal	YORK MILLS	YORK MILLS	EXPRESS	YORK MILLS	TO YORK TERMINAL	95E	95E
+	0	95 York Mills - Islington	YORK MILLS	YORK MILLS	TO ISLINGTON	YORK MILLS		95	95
+	0	97A Yonge - Concorde Loop	YONGE	Y O N G E	TO CONCORDE LOOP			97A	97A-old	97A
+	0	97A Yonge - Lawrence	YONGE	Y O N G E	TO LAWRENCE			97A	97A	97A
+	0	97A Yonge - Concorde Place	YONGE	Y O N G E	TO CONCORDE PLACE			97A	97A-new	97A
+	0	97B Yonge - Bessarion Stn	YONGE	Y O N G E	TO BESSARION STN			97B	97B	97B
+	0	97C Yonge - McNicoll	YONGE	Y O N G E	TO MCNICOLL			97C	97C-MCNICOLL	97C
+	0	97D Yonge - Green Lanes	YONGE	Y O N G E	TO GREEN LANES	EXTRA FARE REQUIRED	NORTH OF STEELES	97D	97D-GREEN	97D
+	0	97 Yonge - Sheppard Stn	YONGE	Y O N G E	TO SHEPPARD-YONGE STN			97	97
+	0	97X Yonge - Sheppard Stn	YONGE	Y O N G E	NON-STOP	Y O N G E	TO SHEPPARD-YONGE STN	97X	97X-SHEPPARD	97X
+	0	97S Yonge - Short Turn	YONGE	Y O N G E	SHORT TURN			97S	97S	97S
+	0	97S Yonge - Eglinton Square	YONGE	Y O N G E	SHORT TURN	Y O N G E	TO EGLINTON SQUARE	97S	97S-EGLINTONSQ	97S
+	0	97S Yonge - Thorncliffe	YONGE	Y O N G E	SHORT TURN	Y O N G E	TO THORNCLIFFE	97S	97S-THORNCLIFFE	97S
+	0	97S Yonge - York Mills	YONGE	Y O N G E	SHORT TURN	Y O N G E	TO YORK MILLS	97S	97S-YORKMILLS	97S
+	0	98 Willowdale - McNicoll	WILLOWDALE	WILLOWDALE	TO MCNICOLL			98	98-MCNICOLL
+	0	98 Willowdale - Sheppard W Stn	WILLOWDALE	WILLOWDALE	TO SHEPPARD WEST STN			98	98-SHEPPARDW
+	0	98 Yonge - Bessarion Terminal	YONGE	Y O N G E	to BESSARION STATION			98	98-BESSARION	Bessarion Station
+	0	98 Yonge - Green Lanes	YONGE	Y O N G E	to GREEN LANES			98	98-BESSARION	Green Lanes
+	0	100 Fleming - Warden	FLEMING	F L E M I N G	T O  H E A T H	F L E M I N G	and WARDEN	100	100-WARDEN
+	0	100A Fleming - Finch	FLEMING	F L E M I N G	TO GRENOBLE	F L E M I N G	and FINCH	100A	100A-FINCH
+	0	100B Fleming - Birchmount	FLEMING	F L E M I N G	TO PROGRESS	F L E M I N G	and BIRCHMOUNT	100B	100B-BIRCHMOUNT
+	0	100C Fleming - Brandonville	FLEMING	F L E M I N G	TO BIRCHMOUNT	F L E M I N G	and BRANDON AVE	100C	100C-BRANDONVILLE
+	0	101 City Hall - Civic Centre	CITY HALL	TO CIVIC CENTRE			101	101CIVIC
+	0	101 City Hall - Dundas	CITY HALL	T O  D U N D A S			101	101DUNDAS
+	0	103 Yonge South - Sheppard Stn	YONGE SOUTH	YONGE SOUTH	TO SHEPPARD-YONGE STN			103	103SHEP	103
+	0	103 Yonge South - Queens Quay	YONGE SOUTH	YONGE SOUTH	TO QUEENS QUAY			103	103QUAY	103
+	0	104 Faywood - Belfield	FAYWOOD	F A Y W O O D	TO BELFIELD			104	104-BELFIELD	104
+	0	104 Faywood - Jarrett	FAYWOOD	F A Y W O O D	TO OAKWOOD			104	104-OAKWOOD	104
+	0	108A Brandon Heights - Dynamic	BRANDON HTS	BRANDON HEIGHTS	TO DYNAMIC DR	BRANDON HEIGHTS	via OVERLORD	108A	108A-DYNAMIC	108A
+	0	108B Brandon Heights - Dynamic	BRANDON HTS	BRANDON HEIGHTS	TO DYNAMIC DR	BRANDON HEIGHTS	via DONNYBROOK	108B	108B-DYNAMIC	108B
+	0	108A Brandon Heights - Edge Park	BRANDON HTS	BRANDON HEIGHTS	TO EDGE PARK	BRANDON HEIGHTS	via OVERLORD	108A	108A-EDGEPARK	108A
+	0	108B Brandon Heights - Edge Park	BRANDON HTS	BRANDON HEIGHTS	TO EDGE PARK	BRANDON HEIGHTS	via DONNYBROOK	108B	108B-EDGEPARK	108B
+	0	108K Brandon Heights - Kincort	BRANDON HTS	BRANDON HEIGHTS	SHORT TURN	BRANDON HEIGHTS	TO KINCORT	108S	108S-KINCORT	108S
+	0	115 Silver Hills - Ruddington	SILVER HILLS	SILVER HILLS	TO RUDDINGTON	SILVER HILLS	via RIDGECREST	115	115-RUDDINGTON	115
+	0	115 Silver Hills - Hospital	SILVER HILLS	SILVER HILLS	NORTH YORK HOSPITAL	SILVER HILLS	via RIDGECREST	115	115-HOSPITAL	115
+	0	115 Silver Hills - York	SILVER HILLS	SILVER HILLS	YORK MILLS & TERMINAL	via RIDGECREST and	RESTHAVEN GARDENS	115	115-YORK	115
+	0	115A Silver Hills - Ruddington	SILVER HILLS	SILVER HILLS	TO RUDDINGTON	SILVER HILLS	via RIDGECREST	115A	115A-RUDDINGTON	115A
+	0	115S Silver Hills - Bessarion Stn	SILVER HILLS	SILVER HILLS	TO BESSARION STN	via RIDGECREST	and RUDDINGTON	115S	115-BESSARION	115S
+	0	115S Silver Hills - Finch	SILVER HILLS	SILVER HILLS	TO FINCH via RIDGECREST	SILVER HILLS	and YONGE STREET	115S	115S-FINCH	115S
+	0	115S Silver Hills - Steeles	SILVER HILLS	SILVER HILLS	T O   S T E E L E S			115S	115-STEELES	115S
+	0	117 Jarrett - Dovehouse	JARRETT	J A R R E T T	TO DOVEHOUSE	J A R R E T T	(KENNEDY)	117	117-DOVE	117
+	0	117A Jarrett - Oriole	JARRETT	J A R R E T T	TO ORIOLE GO STN			117A	117-ORIOLE	117A
+	0	117B Jarrett - Birchmount	JARRETT	J A R R E T T	TO BIRCHMOUNT			117B	117B	117B
+	0	117C Jarrett - Yonge	JARRETT	J A R R E T T	TO EGLINTON & YONGE			117C	117C-EGLINTON	117C
+	0	132A Hillside - Mt Pleasant	HILLSIDE	H I L L S I D E	TO MOUNT PLEASANT	H I L L S I D E	via YONGE/EGLINTON	132A	132A-WB	132A
+	0	132B Hillside - Mt Pleasant	HILLSIDE	H I L L S I D E	TO MOUNT PLEASANT	via DONNY STUBBS DR	and ORIOLE PKWY	132B	132B-WB	132B
+	0	132E Hillside EXPRESS - Mt Pleasant	MOUNT HILLSIDE	H I L L S I D E	EXPRESS	H I L L S I D E	TO MOUNT PLEASANT	132E	132E-WB	132E
+	0	132A Hillside - Sheppard	HILLSIDE	H I L L S I D E	TO SHEPPARD STN	H I L L S I D E	via EGLINTON/YONGE	132A	132A-EB	132A
+	0	132B Hillside - Sheppard	HILLSIDE	H I L L S I D E	TO SHEPPARD STN	via ORIOLE PKWY	and DONNY STUBBS DR	132B	132B-EB	132B
+	0	132E Hillside EXPRESS - Sheppard	HILLSIDE	HILLSIDE EXPRESS	TO SHEPPARD-YONGE STN			132E	132E-EB	132E
+	0	132E Hillside EXPRESS - Glencairn	HILLSIDE	HILLSIDE EXPRESS	TO GLENCAIRN STN			132E	132E-GLENCAIRN	132E
+	0	132S Hillside - Finch	HILLSIDE	H I L L S I D E	SHORT TURN	H I L L S I D E	TO YONGE and FINCH	132S	132S-FINCH	132S
+	0	132S Hillside - Oriole	HILLSIDE	H I L L S I D E	SHORT TURN	H I L L S I D E	TO  O R I O L E	132S	132S-ORIOLE	132S
+	0	134 New Hillside - Pleasant View	N HILLSIDE	NEW HILLSIDE	TO PLEASANT VIEW			134-PLEASANT
+	0	134 New Hillside - Warden Stn	N HILLSIDE	NEW HILLSIDE	TO WARDEN STN			134-WARDEN
+	0	137E Brightstone - Kennedy	BRIGHTSTONE	BRIGHTSTONE EXPRESS	TO FINCH & KENNEDY			137E	137E-KENNEDY	137E
+	0	137E Brightstone - Glencairn	BRIGHTSTONE EXPRESS	TO GLENCAIRN STN			137E	137-GLENCAIRN	137E
+	0	149 Parkway Express	PARKWAY EXPRESS	PARKWAY EXPRESS	TO MILLWOOD TERMINAL	PARKWAY EXPRESS	EXTRA FARE REQUIRED	149	149-MILLWOOD	149
+	0	149 Downtown Express	DOWNTOWN EXPRESS	DOWNTOWN EXPRESS	EXTRA FARE REQUIRED	E X P R E S S		149	149-DOWNTOWN	149
+	0	187 Birchmount Rocket - Bessarion Stn	ROCKET	BIRCHMOUNT ROCKET	TO BESSARION STN	E X P R E S S		187	187-BESS
+	0	187 Birchmount Rocket - Marine Parade	ROCKET	BIRCHMOUNT ROCKET	TO MARINE PARADE	BIRCHMOUNT ROCKET	via DUPONT STN	187	187-PARADE
+	0	191A HWY 27 ROCKET - Millwood Term	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO MILLWOOD TERMINAL	HIGHWAY 27 ROCKET	via FINCH/LAWRENCE	191A	191A-MILLWOOD	191A
+	0	191B HWY 27 ROCKET - Bessarion Stn	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO BESSARION STN	HIGHWAY 27 ROCKET	via MILLWOOD TERMINAL	191B	191B-BESSARION	191B
+	0	191C HWY 27 ROCKET - Bessarion Stn	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO BESSARION STN	HIGHWAY 27 ROCKET	via ROANOKE	191C	191C-BESSARION	191C
+	0	191D HWY 27 ROCKET - York Terminal	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO YORK TERMINAL	HIGHWAY 27 ROCKET	via MILLWOOD TERMINAL	191D	191D-YORK	191D
+	0	191E HWY 27 ROCKET - Bessarion Stn	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO BESSARION STN	E X P R E S S		191E	191E-BESSARION	191E
+	0	191A HWY 27 ROCKET - Sheppard Stn	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO SHEPPARD-YONGE STN	HIGHWAY 27 ROCKET	via LAWRENCE/FINCH	191A	191A-SHEPPARD	191A
+	0	191B HWY 27 ROCKET - Sheppard Stn	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO SHEPPARD-YONGE STN	HIGHWAY 27 ROCKET	via MILLWOOD TERMINAL	191B	191B-SHEPPARD	191B
+	0	191C HWY 27 ROCKET - Sheppard Stn	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO SHEPPARD-YONGE STN	HIGHWAY 27 ROCKET	via ROANOKE	191C	191C-SHEPPARD	191C
+	0	191D HWY 27 ROCKET - Sheppard Stn	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO SHEPPARD-YONGE STN	HIGHWAY 27 ROCKET	via MILLWOOD TERMINAL	191D	191D-SHEPPARD	191D
+	0	191E HWY 27 ROCKET - Sheppard Stn	HWY 27 ROCKET	HIGHWAY 27 ROCKET	TO SHEPPARD-YONGE STN	E X P R E S S		191E	191E-SHEPPARD	191E
+	0	192 Airport Rocket	AIRPORT ROCKET	AIRPORT ROCKET	EXPRESS	E X P R E S S		192	192	192
+	0	192 Rocket	ROCKET	R O C K E T	TO GLENCAIRN STN	E X P R E S S		192	192-GLENCAIRN	192
+	0	194 Airport Rocket	AIRPORT ROCKET	AIRPORT ROCKET	E X P R E S S	E X P R E S S		194	194	194
+	0	194 Rocket	ROCKET	R O C K E T	TO BESSARION STN	E X P R E S S		194	194-BESSARION	194
+	0	199 Rocket - Yonge Street	FINCH ROCKET	FINCH ROCKET	TO YONGE STREET	E X P R E S S		199	199	199
+	0	199A Finch Rocket - Scarborough Centre	FINCH ROCKET	FINCH ROCKET	TO SCARBOROUGH CTR	E X P R E S S		199A	199A-SCARCTR	199A
+	0	199B Finch Rocket - Talwood	FINCH ROCKET	FINCH ROCKET	TO TALWOOD	E X P R E S S		199B	199B-TALWOOD	199B
+	0	199C Finch Rocket - Beaverbrook	FINCH ROCKET	FINCH ROCKET	EXPRESS	FINCH ROCKET	TO BEAVERBROOK	199C	199C-BEAVERBROOK	199C
+	0	199S Finch Rocket - Short Turn	FINCH ROCKET	FINCH ROCKET	SHORT TURN	E X P R E S S		199S	199S	199S
+	0	199S Finch Rocket - Heath Street	FINCH ROCKET	FINCH ROCKET	SHORT TURN	FINCH ROCKET	TO HEATH ST	199S	199S-HEATH	199S
+	0	199S Finch Rocket - Kennedy	FINCH ROCKET	FINCH ROCKET	SHORT TURN	FINCH ROCKET	TO FINCH and KENNEDY	199S	199S-KENNEDY	199S
+	0	200 Brightstone - Oriole	BRIGHTSTONE	BRIGHTSTONE	GO SHUTTLE	BRIGHTSTONE	TO ORIOLE GO STN	200	200-ORIOLE	200
+	0	200 Brightstone - Kennedy	BRIGHTSTONE	BRIGHTSTONE	TO KENNEDY			200	200-KENNEDY	200
+	0	300A Bloor-Danforth - West Mall	BLOORDANFRTH	BLOOR-DANFORTH	BLUE NIGHT	TO WEST MALL	via AIRPORT	300A	300A-WESTMALL
+	0	300B Bloor-Danforth - West Mall	BLOORDANFRTH	BLOOR-DANFORTH	BLUE NIGHT	BLOOR-DANFORTH	TO WEST MALL	300A	300A-WESTMALL
+	0	300A Bloor-Danforth - East Mall	BLOORDANFRTH	BLOOR-DANFORTH	BLUE NIGHT	BLOOR-DANFORTH	TO WEST MALL	300A	300A-EASTMALL
+	0	300B Bloor-Danforth - East Mall	BLOORDANFRTH	BLOOR-DANFORTH	BLUE NIGHT	BLOOR-DANFORTH	TO WEST MALL	300A	300A-EASTMALL
+	0	300S Bloor-Danforth - Airport	BLOORDANFRTH	BLOOR-DANFORTH	BLUE NIGHT	SHORT TURN	TO AIRPORT	300S	300S-AIRPORT
+	0	300S Bloor-Danforth - Yonge	BLOORDANFRTH	BLOOR-DANFORTH	BLUE NIGHT	SHORT TURN	TO YONGE STREET	300S	300S-YONGE
+	0	300S Bloor-Danforth - Short Turn	BLOORDANFRTH	BLOOR-DANFORTH	BLUE NIGHT	BLOOR-DANFORTH	SHORT TURN	300A	300A-WESTMALL
+	0	314 Heath - Dovehouse	HEATH	H E A T H	BLUE NIGHT	H E A T H	TO DOVEHOUSE	314	314-DOVEHOUSE
+	0	314 Heath - Manhattan	HEATH	H E A T H	BLUE NIGHT	H E A T H	TO MANHATTAN	314	314-DOVEHOUSE
+	0	314S Heath - Yonge	HEATH	H E A T H	BLUE NIGHT	SHORT TURN	TO YONGE	314	314-DOVEHOUSE
+	0	320 Yonge - Steeles	YONGE	Y O N G E	BLUE NIGHT	Y O N G E	TO STEELES	320	320-NB	320
+	0	320 Yonge - Steeles via Stn	YONGE	Y O N G E	BLUE NIGHT	TO  S T E E L E S	via SHEPPARD-YONGE STN	320	320-STEELES-SY	320
+	0	320A Yonge - Airport via Stn	YONGE	Y O N G E	BLUE NIGHT	TO  A I R P O R T	via GLENCAIRN STN	320A	320A-AIRPORT	320A
+	0	320E Yonge Express - Steeles	YONGE	YONGE EXPRESS	BLUE NIGHT	YONGE EXPRESS	TO STEELES	320E	320E-NB	320E
+	0	320 Yonge - Queens Quay	YONGE	Y O N G E	BLUE NIGHT	Y O N G E	TO QUEENS QUAY	320	320-SB	320
+	0	320E Yonge Express - Queens Quay	YONGE	YONGE EXPRESS	BLUE NIGHT	YONGE EXPRESS	TO QUEENS QUAY	320E	320E-SB	320E
+	0	320S Yonge - Bloor	YONGE	Y O N G E	BLUE NIGHT	SHORT TURN	TO BLOOR	320S	320S-BLOOR	320S
+	0	320S Yonge - Sheppard	YONGE	Y O N G E	BLUE NIGHT	SHORT TURN	TO SHEPPARD	320S	320S-SHEPPARD	320S
+	0	320S Yonge Express - Sheppard	YONGE	YONGE EXPRESS	BLUE NIGHT	SHORT TURN	TO SHEPPARD	320S	320S-SHEPPARD-EXPRESS	320 Yonge SHORT TURN
+	0	320S Yonge - Sheppard Stn	YONGE	Y O N G E	BLUE NIGHT	SHORT TURN	TO SHEPPARD STN	320S	320S-SHEPPARDSTN	320S
+	0	320S Yonge - Finch	YONGE	Y O N G E	BLUE NIGHT	SHORT TURN	TO FINCH	320S	320S-FINCH	320S
+	0	320S Yonge - Short Turn	YONGE	Y O N G E	BLUE NIGHT	Y O N G E	SHORT TURN	320S	320S	320S
+	0	336 Finch Night - Beaverbrook	FINCH WEST	FINCH WEST	BLUE NIGHT	FINCH WEST	TO BEAVERBROOK	336	336-BEAVERBROOK	336
+	0	336 Finch Night - Quail Valley	FINCH WEST	FINCH WEST	BLUE NIGHT	FINCH WEST	TO QUAIL VALLEY	336	336-QUAILVALLEY	336
+	0	336S Finch Night - Yonge	FINCH WEST	FINCH WEST	BLUE NIGHT	SHORT TURN	TO YONGE & EGLINTON	336S	336S-YONGE	336S
+	0	385 Sheppard - Easton	SHEPPARD	S H E P P A R D	BLUE NIGHT	S H E P P A R D	TO EASTON RD	385	385-EASTON
+	0	385 Sheppard - Weston	SHEPPARD	S H E P P A R D	BLUE NIGHT	S H E P P A R D	TO WESTON RD	385	385-WESTON
+	0	388 Brandonville - Dovehouse	BRANDONVILLE	BRANDONVILLE	BLUE NIGHT	BRANDONVILLE	TO JARRETT & DOVEHOUSE	388	388-DOVEHOUSE	388
+	0	388 Brandonville - Yonge St	BRANDONVILLE	BRANDONVILLE	BLUE NIGHT	BRANDONVILLE	TO YONGE & SHEPPARD	388	388-YONGE	388
+	0	388S Brandonville - Eglinton	BRANDONVILLE	BRANDONVILLE	BLUE NIGHT	SHORT TURN	MT PLEASANT & EGLINTON	388S	388S-EGLINTON	388S
+	0	388S Brandonville - Oakwood	BRANDONVILLE	BRANDONVILLE	BLUE NIGHT	SHORT TURN	TO OAKWOOD	388S	388S-OAKWOOD	388S
+	0	420 Hospital Link	HOSPITAL	HOSPITAL LINK		HUMBER/NORTH YORK		420	420
+[end]													
+							
+[addbusstop_list]	
+1 Thorncliffe Park Drive	1 THORNCLIFFE	1 Thorncliffe	Park Drive
+5 Kingscourt Drive	5 KINGSCOURT 5 Kingscourt Drive
+8 Beaverbrook Avenue	8 BEAVERBROOK	8 Beaverbrook Avenue
+11 Thorncliffe Park Drive	12 THORNCLIFFE	12 Thorncliffe	Park Drive
+12 Thorncliffe Park Drive	12 THORNCLIFFE	12 Thorncliffe	Park Drive
+14 Carluke Crescent	14 CARLUKE	14 Carluke Crescent
+23 Beaverbrook Avenue	23 BEAVERBROOK	23 Beaverbrook Avenue
+24 Davean Drive	24 DAVEAN	24 Davean Drive
+26 Thorncliffe Park Drive	26 THORNCLIFFE	26 Thorncliffe	Park Drive
+28 Thorncliffe Park Drive	28 THORNCLIFFE	28 Thorncliffe	Park Drive
+30 York Road	30 YORK ROAD	30 York Road
+32 Carluke Crescent	32 CARLUKE	32 Carluke Crescent
+35 Beaverbrook Avenue	35 BEAVERBROOK	35 Beaverbrook Avenue
+35 Thorncliffe Park Drive	35 THORNCLIFFE	35 Thorncliffe	Park Drive
+44 Beaverbrook Avenue	44 BEAVERBROOK	44 Beaverbrook Avenue
+44 Thorncliffe Park Drive	44 THORNCLIFFE	44 Thorncliffe	Park Drive
+49 Thorncliffe Park Drive	49 THORNCLIFFE	49 Thorncliffe	Park Drive
+52 Thorncliffe Park Drive	52 THORNCLIFFE	52 Thorncliffe	Park Drive
+65 Thorncliffe Park Drive	65 THORNCLIFFE	65 Thorncliffe	Park Drive
+73 Fifeshire Road	73 FIFESHIRE	73 Fifeshire Road
+75 Thorncliffe Park Drive	75 THORNCLIFFE	75 Thorncliffe	Park Drive
+85 Thorncliffe Park Drive	85 THORNCLIFFE	85 Thorncliffe	Park Drive
+95 Thorncliffe Park Drive	95 THORNCLIFFE	95 Thorncliffe	Park Drive
+128 Basaltic Road	128 BASALTIC	128 Basaltic Road
+133 Exbury Road	133 EXBURY	133 Exbury Road
+139 Basaltic Road	139 BASALTIC	139 Basaltic Road
+180 Basaltic Road	180 BASALTIC	180 Basaltic Road
+205 Cummer Ave - Cummer Lodge	205 CUMMER	205 Cummer Avenue
+277 Basaltic Road	277 BASALTIC	277 Basaltic Road
+280 Basaltic Road	280 BASALTIC	280 Basaltic Road
+285 Cummer Ave - St Johns Rehabilitation Hospital	285 CUMMER	285 Cummer Avenue	St Johns Rehabilitation
+517 Basaltic Road	517 BASALTIC	517 Basaltic Road
+550 Finch Avenue West	FINCH GARAGE	550 Finch Avenue West	NJC Finch Garage
+625 Finch Avenue West	625 FINCH W	625 Finch Avenue West
+685 Finch Avenue West	685 FINCH W	685 Finch Avenue West
+715 Finch Avenue West	715 FINCH W	715 Finch Avenue West
+1111 Finch Avenue West	1111 FINCH W	1111 Finch Avenue West
+1150 Finch Avenue West	1150 FINCH W	1150 Finch Avenue West
+1183 Finch Avenue West	1183 FINCH W	1183 Finch Avenue West
+1685 Finch Avenue West	1685 FINCH W	1685 Finch Avenue West
+2397 Finch Avenue West	2397 FINCH W	2397 Finch Avenue West
+3377 Bayview Ave - Tyndale University	3377 BAYVIEW	3377 Bayview Avenue
+3800 Yonge Street	3800 YONGE	3800 Yonge Street
+5250 Finch Avenue West	5250 FINCH W	5250 Finch Avenue West
+5795 Yonge Street	5795 YONGE	5795 Yonge Street
+5799 Yonge Street	5799 YONGE	5799 Yonge Street
+5800 Yonge Street	5800 YONGE	5800 Yonge Street
+Acacia Road	ACACIA RD	Acacia Road
+Airport Terminal 1	TERMINAL 1	Terminal 1
+Airport Terminal 2	TERMINAL 2	Terminal 2
+Airport Terminal 3	TERMINAL 3	Terminal 3
+Alexmuir Boulevard	ALEXMUIR	Alexmuir Blvd
+Allingham Gardens	ALLINGHAM	Allingham Gardens
+Antrim Crescent	ANTRIM	Antrim Crescent
+Aragon Avenue	ARAGON	Aragon Avenue
+Arnall Avenue	ARNALL	Arnall Avenue
+Arjay Crescent	ARJAY	Arjay Crescent
+Armel Court	ARMEL CT	Armel Court
+Artillery Street	ARTILLERY	Artillery Street
+Ashwarren Road	ASHWARREN	Ashwarren Road
+Avoca Avenue	AVOCA	Avoca Avenue
+Aylesbury Road	AYLESBURY	Aylesbury Road
+Ballacaine Drive	BALLACAINE	Ballacaine Drive
+Basaltic Road	BASALTIC	Basaltic Road
+Bayview Avenue	BAYVIEW	Bayview Avenue
+Bayview Ridge Crescent	BAYVIEW RIDGE	Bayview Ridge	Crescent
+Beath Street	BEATH	Beath Street
+Belfield Road	BELFIELD	Belfield Road
+Bell Royal Court	BELL ROYAL CT	Bell Royal Court
+Bellbrook Road	BELLBROOK	Bellbrook Road
+Belle Ayre Blvd	BELLE AYRE	Belle Ayre Blvd
+Belsize Drive	BELSIZE	Belsize Drive
+Ben Stanton Boulevard	BEN STANTON	Ben Stanton Blvd
+Benett Lane	BENETT LN	Benett Lane
+Benett Lane Farm	BENETT FARM	Benett Lane Farm
+Bennett Avenue	BENNETT	Bennett Avenue
+Bentworth Avenue	BENTWORTH	Bentworth Avenue
+Berl Avenue	BERL	Berl Avenue
+Bessarion Stn	BESSARION STN	Bessarion  Stn
+Bicknell Ave	BICKNELL	Bicknell Avenue
+Birchmount Road	BIRCHMOUNT	Birchmount Road
+Birchmount Road E	BIRCHMOUNT	Birchmount Road
+Birchmount Road W	BIRCHMOUNT	Birchmount Road
+Blantyre Avenue	BLANTYRE	Blantyre Avenue
+Bluffwood Drive	BLUFFWOOD	Bluffwood Drive
+Boarhill Drive	BOARHILL	Boarhill Drive
+Brandon Avenue	BRANDON	Brandon Avenue
+Breckon Gate	BRECKON	Breckon Gate
+Brendan Road	BRENDAN	Brendan Road
+Brian Drive	BRIAN	Brian Drive
+Bridlewood Boulevard	BRIDLEWOOD	Bridlewood Blvd
+Broadway Avenue	BROADWAY	Broadway Avenue
+Browns Line	BROWNS LINE	Browns Line
+Brunello Gate	BRUNELLO	Brunello Gate
+Burbank Drive	BURBANK	Burbank Drive
+Byland Road	BYLAND	Byland Road
+Catford Road	CATFORD	Catford Road
+Capreol Court	CAPREOL	Capreol Court
+Castlebury Crescent	CASTLEBURY	Castlebury Crescent
+Centre Street	CENTRE	Centre Street
+Ceramic Road	CERAMIC	Ceramic Road
+Choiceland Boulevard	CHOICELAND	Choiceland Blvd
+Churchill Ave	CHURCHILL	Churchill Avenue
+Churchill Avenue	CHURCHILL	Churchill Avenue
+Clansman Boulevard	CLANSMAN	Clansman Blvd
+Cleveland Street	CLEVELAND	Cleveland Street
+Clipper Road	CLIPPER	Clipper Road
+Clock Tower Road	CLOCKTOWER	Clock Tower Road
+Cloverhill Road	CLOVERHILL	Cloverhill Road
+Cluny Drive	CLUNY	Cluny Drive
+CNIB	CNIB DISTRICT	CNIB District	CNIB	General Hospital
+CNR Railway Crossing	CNR	CNR Railway Crossing
+Coldwater Road	COLDWATER	Coldwater Road
+Colinayre Crescent	COLINAYRE	Colinayre Crescent
+Collingwood Street	COLLINGWOOD	Collingwood Street
+Conacher Drive	CONACHER	Conacher Drive
+Corning Road	CORNING	Corning Road
+Craydon Avenue	CRAYDON	Craydon Avenue
+Cremorne Avenue	CREMORNE	Cremorne Avenue
+Cummer Avenue	CUMMER	Cummer Avenue
+Dalesford Road	DALESFORD	Dalesford Road
+Damascus Drive	DAMASCUS	Damascus Drive
+Damien Drive	DAMIEN	Damien Drive
+Dancy Avenue	DANCY	Dancy Avenue
+Danzig Street	DANZIG	Danzig Street
+Davean Drive	DAVEAN	Davean Drive
+Dawlish Avenue	DAWLISH	Dawlish Avenue
+Deerfoot Road	DEERFOOT	Deerfoot Road
+Deerford Road	DEERFORD	Deerford Road
+De Marco Boulevard	DEMARCO	De Marco Blvd
+Denlow Boulevard	DENLOW	Denlow Blvd
+Devon Swaby Blvd	DEVON SWABY	Devon Swaby Blvd
+Devon Swaby Boulevard	DEVON SWABY	Devon Swaby Blvd
+Dexter Boulevard	DEXTER	Dexter Blvd
+Dina Road	DINA	Dina Road
+Dixon Road	DIXON	Dixon Road
+Don Valley Parkway	DVP	Don Valley Parkway
+Don Valley Parkway E	DVP	Don Valley Parkway
+Don Valley Parkway W	DVP	Don Valley Parkway
+Donny Stubbs Drive	DONNY STUBBS	Donny Stubbs Drive
+Dormington Drive	DORMINGTON	Dormington Drive
+Dormington Drive	DORMINGTON	Dormington Drive
+Dovehouse Avenue	DOVEHOUSE	Dovehouse Avenue
+Draycott Drive	DRAYCOTT	Draycott Drive
+Dunmurray Boulevard	DUNMURRAY	Dunmurray Blvd
+Duplex Avenue	DUPLEX	Duplex Avenue
+Earlscourt Avenue	EARLSCOURT	Earlscourt Avenue
+East Willow Gate	EAST WILLOW	East Willow Gate
+Edgar Woods Road	EDGAR WOODS	Edgar Woods Road
+Edgemore Drive	EDGEMORE	Edgemore Drive
+Edmonton Road	EDMONTON	Edmonton Road
+Edmund Avenue	EDMUND	Edmund Avenue
+Edwalter Avenue	EDWALTER	Edwalter Avenue
+Eglinton Avenue East	EGLINTON AV E	Eglinton Avenue East
+Eglinton Avenue West	EGLINTON AV W	Eglinton Avenue West
+Eglinton Square	EGLINTON SQ	Eglinton Square
+Elmhurst Drive	ELMHURST DRIVE	Elmhurst Drive
+Elvaston Drive	ELVASTON	Elvaston Drive
+Elwood Boulevard	ELWOOD	Elwood Blvd
+Epic Lane Road	EPIC LANE RD	Epic Lane Road
+Esterbrooke Avenue	ESTERBROOKE AVE	Esterbrooke Avenue
+Exbury Road	EXBURY	Exbury Road
+Fairglen Avenue	FAIRGLEN	Fairglen Avenue
+Faith Avenue	FAITH	Faith Avenue
+Farmcote Road	FARMCOTE	Farmcote Road
+Farmstead Road	FARMSTEAD	Farmstead Road
+Fenelon Drive	FENELON	Fenelon Drive
+Fife Road	FIFE	Fife Road
+Fifeshire Road	FIFESHIRE	Fifeshire Road
+Fifeshire Road N	FIFESHIRE	Fifeshire Road
+Fifeshire Road S	FIFESHIRE	Fifeshire Road
+Finch Ave East	FINCH AVE E	Finch Avenue East
+Finch Avenue East	FINCH AVE E	Finch Avenue East
+Finch Avenue East N	FINCH AVE E	Finch Avenue East
+Finch Avenue East S	FINCH AVE E	Finch Avenue East
+Finch Avenue West	FINCH	Finch Avenue West
+Finch Avenue West N	FINCH AVE W	Finch Avenue West
+Finch Avenue West S	FINCH AVE W	Finch Avenue West
+Finch Ave West S - Humber River Hospital	FINCH AVE W	Finch Avenue West
+Finchdene Square	FINCHDENE	Finchdene Square
+Finchley Road	FINCHLEY	Finchley Road
+Fleming Crescent	FLEMING	Fleming Crescent
+Fleming Drive	FLEMING	Fleming Drive
+Flemington Road	FLEMINGTON	Flemington Road
+Flora Drive	FLORA	Flora Drive
+Florence Avenue	FLORENCE	Florence Avenue
+Forest Heights Blvd	FOREST HEIGHTS	Forest Heights Blvd
+Forest Heights Boulevard	FOREST HEIGHTS	Forest Heights Blvd
+Forest Run Boulevard	FOREST RUN	Forest Run Boulevard
+Forman Avenue	FORMAN AVENUE	Forman Avenue
+Francine Drive	FRANCINE DR	Francine Drive
+Frith Road	FRITH RD	Frith Road
+Gair Drive	GAIR	Gair Drive
+Garrybrook Drive	GARRYBROOK	Garrybrook Drive
+Gaspe Road	GASPE	Gaspe Road
+Geary Avenue	GEARY	Geary Avenue
+Glencairn Stn	GLENCAIRN Stn	Glencairn Stn
+Glengowan Road	GLENGOWAN	Glengowan Road
+Godstone Road	GODSTONE RD	Godstone Road
+Goodview Road	GOODVIEW RD	Goodview Road
+Grandravine Drive	GRANDRAVINE	Grandravine Drive
+Grand Marshall Drive	GRAND MARSHALL	Grand Marshall Drive
+Grandstand Place	GRANDSTAND PLACE	Grandstand Place
+Graydon Hall Drive	GRAYDON HALL	Graydon Hall Drive
+Grenoble Drive	GRENOBLE	Grenoble Drive
+Grenview Boulevard S	GRENVIEW	Grenview Blvd S
+Hagarsville Court	HAGERSVILLE	Hagersville Court
+Hanley Street	HANLEY ST	Hanley Street
+Harold Evans Drive	HAROLD EVANS	Harold Evans Drive
+Hart Avenue	HART	Hart Avenue
+Havenview Road	HAVENVIEW	Havenview Road
+Hayhurst Road	HAYHURST	Hayhurst Road
+Heath Street	HEATH ST	Heath Street
+Heath Street East	HEATH ST E	Heath Street East
+Heath Street West	HEATH ST W	Heath Street West
+Heather Road	HEATHER	Heather Road
+Heathrow Drive	HEATHROW	Heathrow Drive
+Herons Hill Way	HERONS HILL	Herons Hill Way
+Herron Avenue	HERRON	Herron Avenue
+Highway 27	HIGHWAY 27	Highway 27
+Highway 401	HIGHWAY 401	Highway 401
+Hilldowntree Road	HILLDOWNTREE	Hilldowntree Road
+Hillside Avenue	HILLSIDE	Hillside Avenue
+Hillsview Avenue	HILLSIDE	Hillsview Avenue
+Hobart Drive	HOBART	Hobart Drive
+Holmes Avenue	HOLMES	Holmes Avenue
+Holywell Drive	HOLYWELL	Holywell Drive
+Homestead Road	HOMESTEAD	Homestead Road
+Hope Street	HOPE	Hope Street
+Hounslow Avenue	HOUNSLOW	Hounslow Avenue
+Hounslow Heath Road	HOUNSLOW HEATH	Hounslow Heath Road
+Humber College Bus Terminal	HUMBER COLLEGE	Humber College	Bus Terminal
+Humewood Drive	HUMEWOOD	Humewood Drive
+Inglewood Drive	INGLEWOOD	Inglewood Drive
+Invergordon Avenue	INVERGORDON	Invergordon Avenue
+Jarrett Street	JARRETT	Jarrett Street
+Jeanette Street	JEANETTE	Jeanette Street
+Jazel Drive	JAZEL	Jazel Drive
+Kenmanor Boulevard	KENMANOR	Kenmanor Blvd
+Kennedy Road	KENNEDY	Kennedy Road
+Kennedy Road E	KENNEDY	Kennedy Road
+Kennedy Road W	KENNEDY	Kennedy Road
+Kern Road	KERN	Kern Road
+Kilkenny Drive	KILKENNY DR	Kilkenny Drive
+Kingscourt Drive	KINGSCOURT	Kingscourt Drive
+Kingslea Garden	KINGSLEA	Kingslea Gardens
+Kingsley Avenue	KINGSLEY	Kingsley Avenue
+Kingsview Blvd	KINGSVIEW	Kingsview Blvd
+Kirkwood Road	KIRKWOOD	Kirkwood Road
+Kitchener Avenue	KITCHENER	Kitchener Avenue
+Kittery Blvd	KITTERY	Kittery Blvd
+Lascelles Boulevard	LASCELLES	Lascelles Blvd
+Laureleaf Road	LAURELEAF	Laureleaf Road
+Lawrence Avenue East	LAWRENCE	Lawrence Avenue East
+Lawrence Avenue N	LAWRENCE	Lawrence Avenue East
+Lawrence Avenue S	LAWRENCE	Lawrence Avenue East
+Lawrence Avenue West	LAWRENCE	Lawrence Avenue West
+Lawrence Avenue West N	LAWRENCE	Lawrence Avenue West
+Lawrence Avenue West N	LAWRENCE	Lawrence Avenue West
+Lawrence Crescent	LAWRENCE	Lawrence Crescent
+Leaside Park Drive	LEASIDE	Leaside Park Drive
+Lee Avenue	LEE AVE	Lee Avenue
+Legato Court	LEGATO	Legato Court
+Leith Hill Road	LEITH HILL	Leith Hill Road
+Longfield Road	LONGFIELD	Longfield Road
+Longwood Drive	LONGWOOD	Longwood Drive
+Lonsdale Road	LONSDALE	Lonsdale Road
+Lucifer Drive	LUCIFER	Lucifer Drive
+Lumley Avenue	LUMLEY	Lumley Avenue
+Marilyn Avenue	MARILYN	Marilyn Avenue
+Market Street	MARKET	Market Street
+Marowyne Drive	MAROWYNE	Marowyne Drive
+Matthew Avenue	MATTHEW	Matthew Avenue
+Mattice Avenue	MATTICE	Mattice Avenue
+Mattice Road	MATTICE	Mattice Road
+Maurier Boulevard	MAURIER	Maurier Blvd
+Maxome Avenue	MAXOME	Maxome Avenue
+Maybrook Drive	MAYBROOK	Maybrook Drive
+McDairmid Woods Park	MCDAIRMID WOODS	McDairmid Woods Park
+McNicoll Avenue	MCNICOLL	McNicoll Avenue
+McNicoll Avenue N	MCNICOLL	McNicoll Avenue
+McNicoll Avenue S	MCNICOLL	McNicoll Avenue
+Medhurst Road	MEDHURST	Medhurst Road
+Meldazy Drive N	MELDAZY	Meldazy Drive N
+Meldazy Drive S	MELDAZY	Meldazy Drive S
+Merton Street	MERTON	Merton Street
+Milady Road	MILADY	Milady Road
+Military Trail	MILITARY	Military Trail
+Millwood Road	MILLWOOD	Millwood Road
+Millwood Terminal	MILLWOOD ROAD	Millwood Terminal
+Mollard Road	MOLLARD ROAD	Mollard Road
+Monogram Place	MONOGRAM	Monogram Place
+Morbank Drive	MORBANK	Morbank Drive
+Mount Pleasant Road	MOUNT PLEASANT	Mount Pleasant Road
+Mount Pleasant Road E	MOUNT PLEASANT	Mount Pleasant Road
+Mount Pleasant Road W	MOUNT PLEASANT	Mount Pleasant Road
+Munham Gate	MUNHAM	Munham Gate
+Munition Street	MUNITION	Munition Street
+Murray Ross Parkway	MURRAY	Murray Ross Parkway
+Newton Drive	NEWTON	Newton Drive
+Norfinch Dr - Humber River Hospital	NORFINCH	Norfinch Drive Humber	River Hospital
+Norfinch Drive	NORFINCH	Norfinch Drive	
+Norseman Street	NORSEMAN	Norseman Street
+North Heights Road	N HEIGHTS	North Heights Road
+North Woodrow Boulevard	N WOODROW	North Woodrow Blvd
+North York General Hospital	NYGH	North York General Hospital
+North York General Hospital 2	NYGH	North York General Hospital
+Northwest Drive	NORTHWEST	Northwest Drive
+Oakwood Avenue	OAKWOOD	Oakwood Avenue
+Old Yonge Street	OLD YONGE	Old Yonge Street
+Omni Drive	OMNI	Omni Drive
+Orchard Green	ORCHARD	Orchard Green
+Orfus Road	ORFUS	Orfus Road
+Oriole GO Station	ORIOLE GO	Oriole GO Station
+Oriole Parkway	ORIOLE	Oriole Parkway
+Ortona Court	ORTONA	Ortona Court
+Otter Crescent	OTTER	Otter Crescent
+Owen Boulevard	OWEN	Owen Blvd
+Overland Drive	OVERLAND	Overland Drive
+Page Avenue	PAGE AVE	Page Avenue
+Pailton Crescent	PAILTON	Pailton Crescent
+Parkhurst Boulevard	PARKHURST	Parkhurst Blvd
+Parma Court	PARMA	Parma Court
+Paul Markway	PAUL	Paul Markway
+Pawnee Avenue	PAWNEE	Pawnee Avenue
+Patricia Avenue	PATRICIA	Patricia Avenue
+Paul Markway	PAUL MARK	Paul Markway
+Peard Road	PEARD	Peard Road
+Percy Reesor Street	PERCY REESOR	Percy Reesor Street
+Poplar Heights Drive	POPLAR HEIGHTS	Poplar Heights Drive
+Post Road	POST ROAD	Post Road
+Progress Avenue	PROGRESS	Progress Avenue
+Quail Valley Drive	QUAIL VALLEY DR	Quail Valley Drive
+Quail Valley Garage	QUAIL VALLEY	Quail Valley Garage
+Quail Valley Loop	QUAIL VALLEY LP	Quail Valley Loop
+Quail Valley Loop 1	QUAIL VALLEY LP	Quail Valley Loop
+Quail Valley Loop 2	QUAIL VALLEY LP	Quail Valley Loop
+Quail Valley Loop 3	QUAIL VALLEY LP	Quail Valley Loop
+Queensbury Avenue	QUEENSBURY	Queensbury Avenue
+Ralph Chalmers Avenue	RALPH CHALMERS AVENUE	Ralph Chalmers Avenue
+Ravine Park Crescent	RAVINE PARK	Ravine Park Crescent
+Reidmount Avenue	REIDMOUNT	Reidmount Avenue
+Renforth Transitway Stn	RENFORTH STN	Renforth Stn
+Resources Road	RESOURCES	Resources Road
+Resthaven Memorial Gardens	RESTHAVEN	Resthaven Memorial	Gardens
+Ridgecrest Drive	RIDGECREST	Ridgecrest Drive
+Ridgemoor Avenue	RIDGEMOOR	Ridgemoor Avenue
+Ridgevalley Crescent	RIDGEVALLEY	Ridgevalley Crescent
+Rippleton Road	RIPPLETON	Rippleton Road
+Roanoke Road	ROANOKE	Roanoke Road
+Rolph Road	ROLPH	Rolph Road
+Roosevelt Road	ROOSEVELT	Roosevelt Road
+Ruddington Drive	RUDDINGTON	Ruddington Drive
+Ruth Avenue	RUTH	Ruth Avenue
+Salem Avenue	SALEM	Salem Avenue
+Scunthorpe Road	SCUNTHORPE	Scunthorpe Road
+Searle Avenue	SEARLE	Searle Avenue
+Senlac Road	SENLAC	Senlac Road
+Sheldon Avenue	SHELDON	Sheldon Avenue
+Sheppard Ave East	SHEPPARD	Sheppard Ave East
+Sheppard Avenue East	SHEPPARD	Sheppard Avenue East
+Sheppard Avenue East N	SHEPPARD	Sheppard Avenue East
+Sheppard Avenue East S	SHEPPARD	Sheppard Avenue East
+Sheppard Avenue West	SHEPPARD	Sheppard Avenue West
+Sheppard Avenue West N	SHEPPARD	Sheppard Avenue West
+Sheppard Avenue West S	SHEPPARD	Sheppard Avenue West
+Sheppard Stn	SHEPPARD STN	Sheppard  Stn
+Silver Bell Grove	SILVER BELL GROVE	Silver Bell Grove
+Silver Birch Avenue	SILVER BIRCH	Silver Birch Avenue
+Silver Springs Boulevard	SILVER SPRINGS	Silver Springs Blvd
+Silver Star Boulevard	SILVER STAR	Silver Star Blvd
+Silverstone Drive	SILVERSTONE	Silverstone Drive
+Silverview Drive	SILVERVIEW	Silverview Drive
+Simeon Court	SIMEON	Simeon Court
+Six Point Road	SIX POINT	Six Point Road
+Soudan Avenue	SOUDAN AVENUE	Soudan Avenue
+South Woodrow Boulevard	S WOODROW	South Woodrow Blvd
+Spinnaker Way	SPINNAKER	Spinnaker Way
+Spring Gardens Avenue	SPRING GARDENS	Spring Garden Avenue
+St Albans Road	ST ALBANS RD	St Albans Road
+St Crispins Drive	ST CRISPINS DR	St. Crispins Drive
+St Johns Place	ST JOHNS PLACE	St Johns Place
+St Johns Road	ST JOHNS	St Johns Road
+St Regis Crescent	ST REGIS	St Regis Crescent
+Steeles Avenue	STEELES	Steeles Avenue
+Steeles Avenue East	STEELES AVE E	Steeles Avenue East
+Steeles Avenue West	STEELES AVE W	Steeles Avenue West
+Stephen Drive	STEPHEN	Stephen Drive
+Stickney Avenue	STICKNEY	Stickney Avenue
+Stonebridge Boulevard	STONEBRIDGE	Stonebridge Blvd
+Stonebridge Drive	STONEBRIDGE	Stonebridge Drive
+Stubbswood Square	STUBBSWOOD	Stubbswood Square
+Subway Crescent	SUBWAY	Subway Crescent
+Summit Avenue	SUMMIT	Summit Avenue
+Summitcrest Drive	SUMMITCREST	Summitcrest Drive
+Symons Street	SYMONS	Symons Street
+Talwood Drive N	TALWOOD	Talwood Drive North
+Talwood Drive S TALWOOD	Talwood Drive South
+Tangmere Road	TANGMERE	Tangmere Road
+Tarbert Road	TARBERT	Tarbert Road
+The Bridal Path	THE BRIDAL PATH	The Bridal Path
+Thompson Avenue	THOMPSON	Thompson Avenue
+Thorncliffe Park East	THORNCLIFFE W	Thorncliffe Park	Drive East
+Thorncliffe Park North	THORNCLIFFE N	Thorncliffe Park	Drive North
+Thorncliffe Park West	THORNCLIFFE W	Thorncliffe Park	Drive West
+Tinder Crescent	TINDER	Tinder Crescent
+Treeview Drive	TREEVIEW	Treeview Drive
+Trevorton Drive	TREVORTON	Trevorton Drive
+Tuscan Gate	TUSCAN GT	Tuscan Gate
+Tweedsmuir Avenue	TWEEDSMUIR	Tweedsmuir Avenue
+Tyre Avenue	TYRE	Tyre Avenue
+Tyrrel Avenue	TYRRELL	Tyrrel Avenue
+Tyrrel Avenue 1	TYRRELL	Tyrrel Avenue
+Tyrrel Avenue 2	TYRRELL	Tyrrel Avenue
+Tyrrel Avenue 3	TYRRELL	Tyrrel Avenue
+Underhill Drive	UNDERHILL	Underhill Drive
+Uphill Ave - Humber River Hospital	UPHILL	Uphill Avenue	Humber River Hospital
+Upjohn Road	UPJOHN	Upjohn Road
+Upton Road	UPTON	Upton Road
+Uptown Drive	UPTOWN DR	Uptown Drive
+Valley Road	VALLEY	Valley Road
+Van Horne Avenue	VAN HORNE	Van Horne Avenue
+Vellore Park Avenue	VELLORE PARK	Vellore Park Avenue
+Vellore Woods Boulevard	VELLORE WOODS	Vellore Woods Boulevard
+Vesta Drive	VESTA	Vesta Drive
+Via Bagnato	VIA BAGNATO	Via Bagnato
+Viceroy Road	VICEROY	Viceroy Road
+Victoria Park Avenue	VICTORIA PARK	Victoria Park Avenue
+Village Green Square	VILLAGE GREEN	Village Green Square
+Village Station Road	VILLAGE	Village Station Road
+Waggoners Wells Lane	WAGGONERS	Waggoners Wells	Lane
+Walkway to Lemonwood Drive	LEMONWOOD	Walkway to	Lemonwood Drive
+Warden Avenue	WARDEN	Warden Avenue
+Warland Avenue	WARLAND	Warland Avenue
+Weatherell Street	WEATHERELL	Weatherell Street
+Welbeck Road	WELBECK	Welbeck Road
+Welland Avenue	WELLAND	Welland Avenue
+White Heather Boulevard	W HEATHER	White Heather Blvd
+Wickman Road	WICKMAN RD	Wickman Road
+Widdicombe Hill Blvd	WIDDICOMBE	Widdicombe Hill Blvd
+William Carson Crescent	WILLIAM CARSON	William Carson Crescent
+Willowdale Avenue	WILLOWDALE	Willowdale Avenue
+Wingold Avenue	WINGOLD	Wingold Avenue
+Wingrove Hill	WINGROVE	Wingrove Hill
+Winona Drive	WINONA	Winona Drive
+Wood Avenue	WOOD	Wood Avenue
+Woodward Ave - Humber River Hospital	WOODWARD	Woodward Avenue	Humber River Hospital
+Woodward Avenue	WOODWARD	Woodward Avenue
+Wye Valley Road	WYE VALLEY	Wye Valley Road
+Yonge Boulevard	YONGE BLVD	Yonge Boulevard
+Yonge St	YONGE ST	Yonge Street	Please stay on	for station
+Yonge Stn	YONGE STN	Yonge  Stn
+Yonge Street	YONGE ST	Yonge Street
+Yonge Street E	YONGE ST	Yonge Street
+Yonge Street W	YONGE ST	Yonge Street
+York Boulevard	YORK	York Blvd
+York Downs Drive	YORKDOWNS	York Downs Drive
+York Mills Road	YORK MILLS	York Mills Road
+York Mills Road N	YORK MILLS	York Mills Road
+York Mills Road S	YORK MILLS	York Mills Road
+York Road	YORK ROAD	York Road
+York Terminal	YORK TERMINAL	York Terminal
+York View Drive	YORK VIEW	York View Drive
+Yorkview Drive	YORKVIEW	Yorkview Drive
+Yukon Lane	YUKON	Yukon Lane
+
+ARMEL COURT EXPRESS	ARMEL CT	Armel Court	Express Service
+Bessarion Stn EXPRESS	BESSARION STN	Bessarion  Stn	Express Service
+BELFIELD ROAD EXPRESS	BELFIELD RD	Belfield Road	Express Service
+BELFIELD ROAD ARRIVE	BELFIELD	Arriving at Belfield	Road
+BIRCHMOUNT ROAD EXPRESS	BIRCHMOUNT	Birchmount Road	Express Service
+BIRCHMOUNT ROAD ARRIVE	BIRCHMOUNT	Arriving at	Birchmount Road
+DON VALLEY PARKWAY EXPRESS	DVP	Don Valley Parkway	Express Service
+EGLINTON AVENUE EAST EXPRESS	EGLINTON E	Eglinton Avenue East	Express Service
+EGLINTON AVENUE WEST EXPRESS	EGLINTON W	Eglinton Avenue West	Express Service
+EGLINTON AVENUE EAST ARRIVE	EGLINTON E	Arriving at Eglinton	Avenue East
+EGLINTON AVENUE WEST ARRIVE	EGLINTON W	Arriving at Eglinton	Avenue West
+FINCH AVENUE EAST EXPRESS	FINCH E	Finch Avenue East	Express Service
+FINCH AVENUE EAST ARRIVE	FINCH E	Arriving at Finch	Avenue East
+FINCH AVENUE WEST EXPRESS	FINCH W	Finch Avenue West	Express Service
+GRANDRAVINE DR and FRITH RD EXPRESS	GRANDRAVINE	Grandravine Drive	and Frith Road
+HEATH STREET WEST EXPRESS	HEATH	Heath Street West	Express Service
+HEATH STREET WEST  EXPRESS	HEATH	Heath Street West	Express Service
+HILDA AVENUE EXPRESS	HILDA	Hilda Avenue	Express Service
+JETLINER ROAD EXPRESS	JETLINER	Jetliner Road	Express Service
+KENNEDY ROAD EXPRESS	KENNEDY	Kennedy Road	Express Service
+KENNEDY ROAD ARRIVE	KENNEDY	Kennedy Road
+LAWRENCE AVENUE EXPRESS	LAWRENCE	Lawrence Avenue East	Express Service
+LAWRENCE AVENUE EAST EXPRESS	LAWRENCE	Lawrence Avenue East	Express Service
+LAWRENCE AVENUE EAST ARRIVE	LAWRENCE	Arriving at Lawrence	Avenue East
+LAWRENCE AVENUE WEST EXPRESS	LAWRENCE	Lawrence Avenue West	Express Service
+LONSDALE ROAD EXPRESS	LONSDALE	Lonsdale Road	Express Service
+MATTHEW AVENUE EXPRESS	MATTHEW	Matthew Avenue	Express Service
+MCNICOLL AVENUE EXPRESS	MCNICOLL	McNicoll Avenue	Express Service
+MCNICOLL AVENUE ARRIVE	MCNICOLL	Arriving at McNicoll	Avenue
+Mount Pleasant Road EXPRESS	MOUNT PLEASANT	Mount Pleasant Road	Express Service
+Mount Pleasant Road ARRIVE	MOUNT PLEASANT	Mount Pleasant Road	Express Service
+OAKWOOD AVENUE EXPRESS	OAKWOOD	Oakwood Avenue	Express Service
+PACHINO BOULEVARD EXPRESS	PACHINO	Pachino Boulevard	Express Service
+PACHINO BOULEVARD ARRIVE	PACHINO	Arriving at Pachino	Boulevard
+RENFORTH STN EXPRESS	RENFORTH STN	Renforth Stn	Express Service
+RENFORTH STN ARRIVE	RENFORTH STN	Arriving at	Renforth Stn
+ROANOKE ROAD EXPRESS	ROANOKE	Roanoke Road	Express Service
+SHEPPARD AVENUE EAST EXPRESS	SHEPPARD	Sheppard Avenue East	Express Service
+SHEPPARD AVENUE EAST ARRIVE	SHEPPARD	Arriving at Sheppard	Avenue East
+SHEPPARD AVENUE WEST EXPRESS	SHEPPARD	Sheppard Avenue West	Express Service
+SHEPPARD AVENUE EAST ARRIVE	SHEPPARD	Arriving at Sheppard	Avenue East
+SHEPPARD STN EXPRESS	SHEPPARD STN	Sheppard  Stn	Express Service
+SHEPPARD STN ARRIVE	SHEPPARD STN	Arriving at	Sheppard  Stn
+SHERBOURNE STREET EXPRESS	SHERBOURNE	Sherbourne Street	Express Service
+STEELES AVENUE EAST EXPRESS	STEELES	Steeles Avenue East	Express Service
+STEELES AVENUE WEST EXPRESS	STEELES	Steeles Avenue West	Express Service
+THORNCLIFFE PARK DRIVE EAST EXPRESS	THORNCLIFFE	Thorncliffe Park	Express Service
+THORNCLIFFE PARK DRIVE WEST EXPRESS	THORNCLIFFE	Thorncliffe Park	Express Service
+WARDEN AVENUE EXPRESS	WARDEN	Warden Avenue	Express Service
+WARDEN AVENUE ARRIVE	WARDEN	Warden Avenue
+Yonge Street EXPRESS	YONGE ST	Yonge Street	Express Service
+YONGE STREET EXPRESS	YONGE ST	Yonge Street	Express Service
+York Mills Road EXPRESS	YORK MILLS	York Mills Road	Express Service
+
+Bessarion Terminal YRT	BESSARION	#3000 at Bessarion Stn
+Bessarion Terminal	BESSARION	#3001 at Bessarion Stn
+Brenham YRT	BRENHAM	#3002 at Brenham
+#3627 on Steeles	STEELES	#3627 on Steeles
+The Bridle Path YRT	BRIDLE PATH	#3628 at The Bridle Path
+Yonge YRT	YONGE	#3629 at Yonge
+
+	INVALID	Invalid Stop!
+[end]													
+													
+													
+													
+													
+	[infosystem_trip]												
+	{routecode} (z.B. '540001', integer)												
+	{routestring} (ggf. für IBIS-Gerät oder vieleicht später auch zum Setzen)												
+	{terminuscode}												
+	{line string} (z.B. '54 ')												
+													
+	[infosystem_busstop]												
+	{string0: IBIS-Name}												
+	{string1: LCD 1. Zeile links}												
+	{string2: LCD 1. Zeile rechts}												
+	{string3: LCD 2. Zeile links}												
+	{string4: LCD 2. Zeile rechts}					
