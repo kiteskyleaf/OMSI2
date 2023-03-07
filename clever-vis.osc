@@ -887,7 +887,8 @@
 		(L.L.clever_run_active) !
 		(L.L.haltewunschlampe) ! &&
 			{if}
-				0 (S.L.clever_LED_time) (S.L.clever_LED_mode)
+				0 (S.L.clever_LED_time) 
+				3 (S.L.clever_LED_mode)
 			{endif}
 		
 		(L.L.clever_LED_time)
@@ -913,7 +914,7 @@
 							
 						l0 1 = 
 							{if}	
-								2 (S.L.clever_LED_mode)
+								0 (S.L.clever_LED_mode)
 							{endif}
 							
 						l0 2 = 
@@ -934,7 +935,7 @@
 		(L.L.clever_run_active) !
 		(L.L.clever_LED_mode) 1 > &&
 			{if}
-				3 (S.L.clever_LED_mode)
+				0 (S.L.clever_LED_mode)
 			{endif}
 		
 		
