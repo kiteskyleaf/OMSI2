@@ -316,7 +316,7 @@
 	
 	(L.L.clever_screen) 11 =
 		{if}
-			"FUCK YOU" (S.$.Matrix_PR1) "" (S.$.Matrix_PR2)
+			"EXPRESS NETWORK" (S.$.Matrix_PR1) "" (S.$.Matrix_PR2)
 		{endif}	
 {end}
 
@@ -830,17 +830,34 @@
 		
 		l0 0 =
 			{if}
-			"System Paused" (S.$.clever_LED)
-					
-				(L.L.clever_run_active) !
-				{if}
-					0 (S.L.clever_LED_time)
-				{endif}
-			{endif}
+				"" (L.S.Time)
+				(L.S.Time) 46800 <
+					{if}
+						(L.S.Time) 3600 <
+							{if}
+								(L.S.Time) 3600 / 12 + s0 trunc s1 "02" $IntToStrEnh $+ ":" $+ 
+								l0 l1 - 60 * s0 trunc s1 "02" $IntToStrEnh $+ " AM" $+
+							{else}
+								(L.S.Time) 43200 >
+								{if}
+									(L.S.Time) 3600 / s0 trunc s1 "02" $IntToStrEnh $+ ":" $+ 
+									l0 l1 - 60 * s0 trunc s1 "02" $IntToStrEnh $+ " PM" $+
+								{else}
+									(L.S.Time) 3600 / s0 trunc s1 "02" $IntToStrEnh $+ ":" $+ 
+									l0 l1 - 60 * s0 trunc s1 "02" $IntToStrEnh $+ " AM" $+
+								{endif}
+							{endif}
+					{else}
+						(L.S.Time) 43200 - 3600 / s0 trunc s1 "02" $IntToStrEnh $+ ":" $+ 
+						l0 l1 - 60 * s0 trunc s1 "02" $IntToStrEnh $+ " PM" $+
+					{endif}
+				
+				(S.$.clever_LED)
+			{endif}	
 			
 		l0 1 =
 			{if}
-			"Stop Request" (S.$.clever_LED)
+			"STOP REQUESTED" (S.$.clever_LED)
 			{endif}	
 			
 		l0 2 =
