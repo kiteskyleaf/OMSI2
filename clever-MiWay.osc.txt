@@ -1,0 +1,1498 @@
+'##############
+'Clever Dev RBL
+'##############
+
+'2015 Darius Bode
+'2017 Modded John M.
+'2018 Added PR Mod John M.
+
+{trigger:clever_lowdisplay_but1}
+	1 (S.L.clever_lowdisplay_but1)
+	(T.L.ev_clever_key)	
+{end}
+
+{trigger:clever_lowdisplay_but1_off}
+	0 (S.L.clever_lowdisplay_but1)
+	(T.L.ev_clever_key)
+{end}
+
+{trigger:clever_lowdisplay_but2}
+	1 (S.L.clever_lowdisplay_but2)
+	(T.L.ev_clever_key)	
+{end}
+
+{trigger:clever_lowdisplay_but2_off}
+	0 (S.L.clever_lowdisplay_but2)
+	(T.L.ev_clever_key)
+{end}
+
+{trigger:clever_click_0}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "0" $+ (S.$.clever_input)		
+		{endif}
+			
+	(L.L.clever_screen) 4 =
+		{if}
+			0 (S.L.clever_logged_in) (S.L.clever_screen)				
+			4 (S.L.clever_prev_screen)
+		{endif}
+
+	(L.L.clever_screen) 9 =
+		{if}
+			(T.F.announce_reardoors)
+		{endif}	
+		
+	(L.L.clever_screen) 10 =
+		{if}
+			(T.F.intercom_payfare)
+		{endif}	
+
+	(L.L.clever_screen) 11 =
+		{if}
+			"" (S.$.Matrix_PR1) "" (S.$.Matrix_PR2)
+		{endif}	
+	(T.L.ev_clever_key)
+{end}
+
+{trigger:clever_click_1}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "1" $+ (S.$.clever_input)		
+		{endif}
+
+	(L.L.clever_screen) 4 =
+		{if}
+			10 (S.L.clever_screen)				
+			4 (S.L.clever_prev_screen)
+			"" (S.$.clever_input)
+		{endif}
+
+	(L.L.clever_screen) 9 =
+		{if}
+			(T.F.announce_pleasemoveback)
+		{endif}	
+
+	(L.L.clever_screen) 10 =
+		{if}
+		{endif}
+	(T.L.ev_clever_key)
+	
+	(L.L.clever_screen) 11 =
+		{if}
+			"E X P R E S S" (S.$.Matrix_PR1) "" (S.$.Matrix_PR2)
+		{endif}	
+{end}
+
+{trigger:clever_click_2}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "2" $+ (S.$.clever_input)		
+		{endif}
+
+	(L.L.clever_screen) 4 =
+		{if}
+			5 (S.L.clever_screen)				
+			4 (S.L.clever_prev_screen)
+			"K" (L.L.clever_int_run) s0 0 > {if} l0 $IntToStr $+ {endif} (S.$.clever_input)
+		{endif}	
+
+	(L.L.clever_screen) 9 =
+		{if}
+			(T.F.announce_whiteline)
+		{endif}
+
+	(L.L.clever_screen) 10 =
+		{if}
+			(T.F.intercom_delays-transfer)
+		{endif}
+		
+	(L.L.clever_screen) 11 =
+		{if}
+			"DETOUR ON ROUTE" (S.$.Matrix_PR1) "" (S.$.Matrix_PR2)
+		{endif}	
+	(T.L.ev_clever_key)
+{end}
+
+{trigger:clever_click_3}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "3" $+ (S.$.clever_input)		
+		{endif}
+		
+	(L.L.clever_screen) 4 =
+		{if}
+			6 (S.L.clever_screen)				
+			4 (S.L.clever_prev_screen)
+			"" (S.$.clever_input)
+		{endif}		
+
+	(L.L.clever_screen) 9 =
+		{if}
+			(T.F.announce_shortturn)
+		{endif}	
+	(T.L.ev_clever_key)
+
+	(L.L.clever_screen) 10 =
+		{if}
+			(T.F.intercom_stoprightthere)
+		{endif}
+	
+	(L.L.clever_screen) 11 =
+		{if}
+			"PROOF OF PAYMENT" (S.$.Matrix_PR1) "IN EFFECT" (S.$.Matrix_PR2)
+		{endif}	
+{end}
+
+{trigger:clever_click_4}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "4" $+ (S.$.clever_input)		
+		{endif}
+		
+	(L.L.clever_screen) 4 =
+		{if}
+			7 (S.L.clever_screen)				
+			4 (S.L.clever_prev_screen)
+			"" (S.$.clever_input)
+		{endif}	
+		
+	(L.L.clever_screen) 9 =
+		{if}
+			(T.F.announce_payment)
+		{endif}	
+
+	(L.L.clever_screen) 10 =
+		{if}
+			(T.F.intercom_welcomeaboard)
+		{endif}
+		
+	(L.L.clever_screen) 11 =
+		{if}
+			"SHORT TURN" (S.$.Matrix_PR1) "" (S.$.Matrix_PR2)
+		{endif}	
+		
+			(T.L.ev_clever_key)
+{end}
+
+{trigger:clever_click_5}
+
+	(L.L.clever_screen) 1 = (L.$.clever_input) $length 0 = &&
+		{if}
+			0 (S.L.clever_screen) 1 (S.L.clever_prev_screen) "" (S.$.clever_input)	
+		{endif}
+
+	(L.L.clever_screen) 2 < (L.$.clever_input) $length 0 > &&
+		{if}
+			(L.$.clever_input) $length 1 >
+				{if}
+					(L.$.clever_input) 1 $cutEnd (S.$.clever_input)		
+				{else}
+					"" (S.$.clever_input)
+				{endif}	
+		{endif}	
+
+	(L.L.clever_screen) 5 = (L.$.clever_input) $length 0 = (L.$.clever_input) "K" $= || &&
+		{if}
+			4 (S.L.clever_screen) 5 (S.L.clever_prev_screen) "" (S.$.clever_input)	
+		{endif}
+		
+	(L.L.clever_screen) 5 >= (L.L.clever_screen) 7 <= && (L.$.clever_input) $length 0 = &&
+		{if}
+			(L.L.clever_screen) (S.L.clever_prev_screen) 4	(S.L.clever_screen)	"" (S.$.clever_input)
+		{endif}	
+
+	(L.L.clever_screen) 5 >= (L.L.clever_screen) 7 <= && (L.$.clever_input) $length 0 > &&
+		{if}
+			(L.$.clever_input) $length 1 >
+				{if}
+					(L.$.clever_input) 1 $cutEnd (S.$.clever_input)		
+				{else}
+					"0" (S.$.clever_input)
+				{endif}
+		{endif}		
+		
+	(L.L.clever_screen) 4 =
+		{if}
+			9 (S.L.clever_screen)				
+			4 (S.L.clever_prev_screen)
+			"" (S.$.clever_input)
+		{endif}
+		
+	(T.L.ev_clever_key)
+{end}
+
+{trigger:clever_click_6}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "5" $+ (S.$.clever_input)		
+		{endif}
+
+	(L.L.clever_screen) 4 =
+		{if}
+			11 (S.L.clever_screen)				
+			4 (S.L.clever_prev_screen)
+			"" (S.$.clever_input)
+		{endif}
+	
+	(L.L.clever_screen) 9 =
+		{if}
+			(T.F.announce_localstops)
+		{endif}
+	
+	(L.L.clever_screen) 10 =
+		{if}
+			(L.L.announce_mode) 0 =
+				{if}
+					(T.F.local1)
+					1 (S.L.announce_mode)
+				{else}
+					(T.F.local2)
+					0 (S.L.announce_mode)
+				{endif}
+		{endif}	
+		
+	(L.L.clever_screen) 11 =
+		{if}
+			"NON-STOP" (S.$.Matrix_PR1) "" (S.$.Matrix_PR2)
+		{endif}	
+	
+	(T.L.ev_clever_key)
+{end}
+
+{trigger:clever_click_7}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "6" $+ (S.$.clever_input)		
+		{endif}
+		
+	(L.L.clever_screen) 9 =
+		{if}
+			(T.F.announce_kinderway)
+		{endif}	
+	
+	(L.L.clever_screen) 10 =
+		{if}
+			(L.L.announce_mode) 0 =
+				{if}
+					(T.F.express1)
+					1 (S.L.announce_mode)
+				{else}
+					(T.F.express2)
+					0 (S.L.announce_mode)
+				{endif}
+		{endif}	
+		
+	(L.L.clever_screen) 11 =
+		{if}
+			"EXPRESS CANCELLED" (S.$.Matrix_PR1) "LOCAL SERVICE ONLY" (S.$.Matrix_PR2)
+		{endif}	
+	(T.L.ev_clever_key)
+{end}
+
+{trigger:clever_click_8}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "7" $+ (S.$.clever_input)		
+		{endif}
+		
+	(L.L.clever_screen) 9 =
+		{if}
+			(T.F.announce_extrafare)
+		{endif}
+	(T.L.ev_clever_key)
+	
+	(L.L.clever_screen) 10 =
+		{if}
+			(L.L.announce_mode) 0 =
+				{if}
+					(T.F.night1)
+					1 (S.L.announce_mode)
+				{else}
+					(T.F.shuttleserviceannouncements)
+					0 (S.L.announce_mode)
+				{endif}
+		{endif}
+	
+	(L.L.clever_screen) 11 =
+		{if}
+			"EXPRESS NETWORK" (S.$.Matrix_PR1) "" (S.$.Matrix_PR2)
+		{endif}	
+{end}
+
+{trigger:clever_click_9}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "8" $+ (S.$.clever_input)		
+		{endif}
+	(T.L.ev_clever_key)
+	
+	(L.L.clever_screen) 10 =
+		{if}
+			(T.F.shuttleserviceannouncements)
+		{endif}			
+{end}
+
+{trigger:clever_click_10}
+	(L.$.clever_input) $length (L.L.clever_input_max) <
+		{if}
+			(L.$.clever_input) "9" $+ (S.$.clever_input)
+		{endif}
+	(T.L.ev_clever_key)		
+{end}
+
+{trigger:clever_click_11}
+
+	(L.L.clever_screen) 0 =
+		{if}
+			(L.$.clever_input) $StrToFloat (C.L.driver_id) =
+				{if}
+					"" (S.$.clever_input)
+					3 (S.L.clever_screen) 0 (S.L.clever_prev_screen)
+					0 (S.L.clever_timer)
+					(T.L.ev_clever_key_confirm)
+				{else}
+					"" (S.$.clever_input)
+					2 (S.L.clever_screen) 0 (S.L.clever_prev_screen)
+					0 (S.L.clever_timer)
+					(T.L.ev_clever_key_confirm)
+				{endif}
+		{endif}
+		
+	(L.L.clever_screen) 1 =
+		{if}
+			(L.$.clever_input) $StrToFloat (C.L.driver_pin) =
+				{if}
+					"" (S.$.clever_input)
+					3 (S.L.clever_screen) 1 (S.L.clever_prev_screen)
+					0 (S.L.clever_timer)
+					(T.L.ev_clever_key_confirm)
+				{else}
+					"" (S.$.clever_input)
+					2 (S.L.clever_screen) 1 (S.L.clever_prev_screen)
+					0 (S.L.clever_timer)
+					(T.L.ev_clever_key_confirm)
+				{endif}
+		{endif}	
+		
+	(L.L.clever_screen) 5 =
+		{if}
+			(L.$.clever_input) 1 $cutBegin $StrToFloat s0 (L.L.timetable_run) =
+				{if}
+					l0 (S.L.clever_int_run) 1 (S.L.clever_run_active)
+					"" (S.$.clever_input) (S.$.clever_string_line)
+					4 (S.L.clever_screen) 5 (S.L.clever_prev_screen)
+					0 (S.L.clever_timer)  (S.L.clever_int_line) 2 (S.L.clever_int_dest)
+					(L.L.matrix_timer_zero) (S.L.matrix_timer) 0 (S.L.matrix_flip) (S.L.matrix_page)
+					1 (S.L.clever_init_run)
+					(T.L.ev_clever_key_confirm)
+				{else}
+					(L.L.schedule_active)
+						{if}
+							2 (S.L.clever_screen) 5 (S.L.clever_prev_screen)
+						{else}
+							8 (S.L.clever_screen) 5 (S.L.clever_prev_screen)
+							(T.L.localonestopannouncements)
+						{endif}
+					"" (S.$.clever_input) (S.$.clever_string_line)					
+					0 (S.L.clever_timer) (S.L.clever_int_run) (S.L.clever_run_active) (S.L.clever_init_run)
+					"" (S.$.clever_string_line) 2 (S.L.clever_int_dest)
+					(L.L.matrix_timer_zero) (S.L.matrix_timer) 0 (S.L.matrix_flip) (S.L.matrix_page)
+					(T.L.ev_clever_key_confirm)
+				{endif}
+		{endif}	
+
+	(L.L.clever_screen) 6 =
+		{if}
+			(L.$.clever_input) (S.$.clever_string_line)
+			"" (S.$.clever_input)
+			4 (S.L.clever_screen) 6 (S.L.clever_prev_screen)
+			0 (S.L.clever_timer)  (S.L.clever_int_run)	
+			(T.L.ev_clever_key_confirm)
+		{endif}		
+		
+	(L.L.clever_screen) 7 =
+		{if}
+			(L.$.clever_input) $StrToFloat trunc (S.L.clever_int_dest)	
+			(L.L.matrix_timer_zero) (S.L.matrix_timer) 0 (S.L.matrix_flip) (S.L.matrix_page)
+			"" (S.$.clever_input)
+			4 (S.L.clever_screen) 7 (S.L.clever_prev_screen)
+			0 (S.L.clever_timer)  (S.L.clever_int_run) (S.L.clever_run_active)		
+			(T.L.ev_clever_key_confirm)
+		{endif}		
+
+	(L.L.clever_screen) 8 =
+		{if}
+			(L.$.clever_input) $StrToFloat trunc (S.L.clever_int_dest)	
+			(L.L.matrix_timer_zero) (S.L.matrix_timer) 0 (S.L.matrix_flip) (S.L.matrix_page)
+			"" (S.$.clever_input)
+			4 (S.L.clever_screen) 7 (S.L.clever_prev_screen)
+			0 (S.L.clever_timer)  (S.L.clever_int_run) (S.L.clever_run_active)		
+			(T.L.ev_clever_key_confirm)
+		{endif}	
+		
+	(L.L.clever_screen) 9 =
+		{if}
+			4 (S.L.clever_screen)				
+			9 (S.L.clever_prev_screen)
+			"" (S.$.clever_input)
+			(T.L.ev_clever_key_confirm)
+		{endif}	
+
+	(L.L.clever_screen) 10 =
+		{if}
+			4 (S.L.clever_screen)				
+			10 (S.L.clever_prev_screen)
+			"" (S.$.clever_input)
+			(T.L.ev_clever_key_confirm)
+		{endif}	
+		
+	(L.L.clever_screen) 11 =
+		{if}
+			4 (S.L.clever_screen)				
+			10 (S.L.clever_prev_screen)
+			"" (S.$.clever_input)
+			(T.L.ev_clever_key_confirm)
+		{endif}	
+{end}
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+{macro:clever_init}
+
+	(L.S.Day) (S.L.Init_Day)
+
+{end}
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+{macro:clever_frame}
+
+
+' ########################################################################################################################################################################
+'	ANNOUNCE AFTER SET TIME DELAY
+' ########################################################################################################################################################################
+
+	(L.L.globaltimer) (L.L.announce_pre_time) (C.L.announce_pre_sec) + >
+	(L.L.announce_pre_time) 0 > &&
+	(L.L.Velocity) 2 > (L.L.door_0) 0 > (L.L.door_2) 0 > || || &&
+	(L.L.globaltimer) (L.L.announce_info_wait) 19 + > &&
+	(L.L.cp_switch_speaker) 0 > &&
+		{if}		
+			(M.L.announce_call)
+			0 (S.L.announce_pre_time)
+		{endif}	
+		
+
+	(L.L.globaltimer) (L.L.announce_info_wait) 19 + >
+		{if}
+                        (M.L.announce_trig)
+			0 (S.L.announce_info_wait)
+		{endif}
+
+' ########################################################################################################################################################################
+'	EXTERNAL BUS STOPS ANNOUNCEMENTS
+' ########################################################################################################################################################################
+
+	(L.L.ext_announce_seq) 3 = (L.L.doorTarget_0) 0 = &&
+		{if}
+			"ditto.wav" $msg (T.F.ev_ext_announce)	
+		{endif}
+					
+	(L.L.cp_switch_speaker) 1 <
+		{if}
+			
+'			SEQUENCE 1 = WHEN ANNOUNCE_SEQ IS READY, DEPARTING STOP AND WAITING FOR ARRIVAL
+			(L.L.doorTarget_0) 0 = (L.L.ext_announce_seq) 0 = &&
+				{if}
+					1 (S.L.ext_announce_seq) 0 (S.L.ext_announce_time) (S.L.ext_announce_repeat)	
+				{endif}
+				
+'			SEQUENCE 2 = ARRIVING AND ANNOUNCING WHEN DOORS OPEN
+			(L.L.ext_announce_seq) 1 = (L.L.doorTarget_0) 1 = &&
+				{if}
+					2 (S.L.ext_announce_seq) 
+					(L.L.globaltimer) (S.L.ext_announce_time)					
+				{endif}
+				
+			(L.L.ext_announce_seq) 2 =	
+			(L.L.globaltimer) (L.L.ext_announce_time) (C.L.ext_announce_delay) + > &&
+				{if}
+					3 (S.L.ext_announce_seq) 0 (S.L.ext_announce_repeat)
+				{endif}
+				
+'			SEQUENCE 3 = AT THE STOP ANNOUNCING UNTIL DEPARTURE	
+			(L.L.ext_announce_seq) 3 =
+			(L.L.door_0) 0.1 > &&
+				{if}
+				
+					(L.L.ext_announce_repeat) 0 =
+						{if}
+							"..\..\Announcements\" 
+							0 (M.V.GetDepotStringGlobal) $+  
+							"\" $+  
+							"EXT_" $+ 
+							(L.L.clever_int_dest) 6 (M.V.GetTerminusString) $+		
+							".wav" $+ 
+							$msg (T.F.ev_ext_announce)	
+						{endif}
+					
+					(L.L.ext_announce_repeat) (L.S.Timegap) + (S.L.ext_announce_repeat) s0
+					
+					l0 (C.L.ext_announce_repeat) > {if} 0 (S.L.ext_announce_repeat) {endif}
+						
+				{endif}
+				
+'			RESET WHEN DEPARTING
+			(L.L.doorTarget_0) 0 = (L.L.ext_announce_seq) 1 > &&
+				{if}
+					0 (S.L.ext_announce_seq) 0 (S.L.ext_announce_time) 0 (S.L.ext_announce_repeat)	 						
+				{endif}
+				
+		{else}
+			0 (S.L.ext_announce_seq) (S.L.ext_announce_time) (S.L.ext_announce_repeat)
+		{endif}	
+		
+' ########################################################################################################################################################################
+'	STOP_DISPLAY SEPERATED FROM CLEVER_STOP FOR DISPLAY STRINGS
+' ########################################################################################################################################################################	
+
+	(L.L.clever_run_active)
+		{if}
+			(L.L.AI) !
+				{if}
+					(L.L.Velocity) 1 <
+					(L.L.door_0) 0 > (L.L.door_2) 0 > || &&
+					(L.L.announce_pre_time) (L.L.clever_stop_display) (L.L.clever_stop) < && ||
+						{if}
+							1 (S.L.clever_stop_display_fwd)
+						{endif}
+						
+					(L.L.door_0) 0 = (L.L.door_2) 0 = &&
+					(L.L.Velocity) 1 >= &&
+					(L.L.clever_stop_display) (L.L.clever_stop) <= (L.L.clever_stop_display) (M.V.GetTTBusstopName) (M.V.GetBusstopIndex) 1 (M.V.GetBusstopString) (L.L.clever_stop) 1 + (M.V.GetTTBusstopName) (M.V.GetBusstopIndex) 1 (M.V.GetBusstopString) $= ! || &&
+					(L.L.announce_pre_time) ! &&
+					(L.L.clever_LED_mode) 2 >= ! &&
+					(L.L.clever_stop_display_fwd) 1 = &&
+						{if}
+							(L.L.clever_stop_display) 1 + (S.L.clever_stop_display)
+							0 (S.L.clever_stop_display_fwd)
+						{endif}
+				{else}
+				
+					(L.L.clever_stop) (S.L.clever_stop_display)
+				{endif}
+		{else}
+			0 (S.L.clever_stop_display) (S.L.clever_stop_display_fwd)
+		{endif}
+	
+' ########################################################################################################################################################################
+'	DISPLAY SCHEDULE OR RUN PAPER
+' ########################################################################################################################################################################
+
+	(L.L.AI) !
+		{if}
+			1 (S.L.schedule_standard)
+		{endif}		
+
+' ########################################################################################################################################################################
+'	FIND RUN AND WEEKDAY
+' ########################################################################################################################################################################
+
+(L.L.run_display)
+	{if}
+		(L.L.clever_int_run) (L.L.clever_int_run_prev) = !
+		(L.L.run_display) &&
+			{if}
+				1 (S.L.clever_int_run_upd)
+			{endif}			
+			
+		(L.L.clever_int_run_upd) (L.L.clever_int_run) 0 = ||
+			{if}
+				(L.L.clever_int_run) s0
+				l0 0 >
+					{if}
+						" " l0 "03" $IntToStrEnh $+ (S.$.clever_rundisplay)
+					{else}
+						"" (S.$.clever_rundisplay)
+					{endif}
+				0 (S.L.clever_int_run_upd)
+			{endif}		
+	{endif}
+
+(L.L.schedule_active) ! (L.L.AI) ! &&
+	{if}
+		1 (S.L.clever_init_run) 0 (S.L.clever_run_active)
+	{endif}	
+			
+(L.S.Day) (L.L.Init_Day) = !
+(L.L.First_Day) ! ||
+{if}
+1 (S.L.First_Day)
+
+'	Wochentag
+
+'	Tagesziffer
+	(L.S.Day) 7 % (S.L.tagesrechner_tagesziffer)
+	
+'	Monatsziffer
+	(L.S.Month) 1 =	
+	(L.S.Month) 10 = || 
+		{if}
+		0 (S.L.tagesrechner_monatsziffer)
+		{endif}
+		
+	(L.S.Month) 2 =	
+	(L.S.Month) 3 = || 
+	(L.S.Month) 11 = || 
+		{if}
+		3 (S.L.tagesrechner_monatsziffer)
+		{endif}
+		
+	(L.S.Month) 4 =	
+	(L.S.Month) 7 = ||	
+		{if}
+		6 (S.L.tagesrechner_monatsziffer)
+		{endif}
+		
+	(L.S.Month) 5 =	
+		{if}
+		1 (S.L.tagesrechner_monatsziffer)
+		{endif}
+		
+	(L.S.Month) 6 =			
+		{if}
+		4 (S.L.tagesrechner_monatsziffer)
+		{endif}
+		
+	(L.S.Month) 8 =	
+		{if}
+		2 (S.L.tagesrechner_monatsziffer)
+		{endif}	
+		
+	(L.S.Month) 12 =	
+	(L.S.Month) 9 = ||	
+		{if}
+		5 (S.L.tagesrechner_monatsziffer)
+		{endif}
+		
+
+'	Jahresziffer
+	(L.S.Year) $IntToStr 2 $cutBegin $StrToFloat s1
+	l1 4 / trunc l1 + 7 % (S.L.tagesrechner_jahresziffer)  
+	
+'	Jahrhundertziffer
+	(L.S.Year) $IntToStr 2 $cutEnd $StrToFloat 4 % s1
+	3 l1 - 2 * (S.L.tagesrechner_jahrhundertziffer)
+	
+'	Schaltjahreskorrektur
+	(L.S.Year) 4 % 0 = 
+	(L.S.Month) 3 < &&
+		{if}
+			1 (S.L.tagesrechner_schaltjahreskorrektur) 
+		{else}
+			0 (S.L.tagesrechner_schaltjahreskorrektur) 
+		{endif}
+
+'	Errechnung Wochentag
+	(L.L.tagesrechner_tagesziffer)  
+	(L.L.tagesrechner_monatsziffer) + 
+	(L.L.tagesrechner_jahresziffer) + 
+	(L.L.tagesrechner_jahrhundertziffer) +
+	(L.L.tagesrechner_schaltjahreskorrektur) - 
+	7 % (S.L.wochentag)		
+{endif}
+		
+			(L.L.schedule_active) ! (L.L.AI_init) ! (L.L.AI) && ||
+				{if}
+					1 (S.L.timetable_findrun) 			
+					1 (S.L.Refresh_Strings) 
+					0 (S.L.timetable_run)
+				{endif}
+	
+
+
+' ########################################################################################################################################################################			
+'					RUN SHEET MOD 
+' ########################################################################################################################################################################
+			(L.L.schedule_active)
+			(L.L.timetable_findrun) &&
+			(L.L.globaltimer) 1 > &&
+			{if}
+				4 (M.V.GetDepotStringGlobal) "RUNSHEET" $=
+					{if}
+						(L.L.schedule_active)
+						{if}
+						0 (S.L.clever_finalstop)
+
+' ########################################################################################################################################################################			
+'					MON-FRI
+' ########################################################################################################################################################################
+						(L.L.wochentag) 1 >= (L.L.wochentag) 6 < &&
+							{if}
+								(M.V.GetTTLineString) "56" $=	
+									{if}
+										0 (M.V.GetTTBusstopName) "Tyrell Avenue 1" $= 25 (M.V.GetTTBusstopName) "Tyrell Avenue 1" $= || {if} 05 (S.L.timetable_run) {endif}
+										0 (M.V.GetTTBusstopName) "Tyrell Avenue 2" $= 25 (M.V.GetTTBusstopName) "Tyrell Avenue 2" $= || {if} 06 (S.L.timetable_run) {endif}
+										0 (M.V.GetTTBusstopName) "Tyrell Avenue 3" $= 25 (M.V.GetTTBusstopName) "Tyrell Avenue 3" $= || {if} 07 (S.L.timetable_run) {endif}
+									{endif}
+								(M.V.GetTTLineString) "81" $=	
+									{if}
+										1 (M.V.GetTTBusstopName) "Quail Valley Loop 1" $= {if} 01 (S.L.timetable_run) {endif}
+										1 (M.V.GetTTBusstopName) "Quail Valley Loop 2" $= {if} 02 (S.L.timetable_run) {endif}
+										1 (M.V.GetTTBusstopName) "Quail Valley Loop 3" $= {if} 03 (S.L.timetable_run) {endif}
+									{endif}
+									
+								(M.V.GetTTLineString) "56" $= ! (M.V.GetTTLineString) "81" $= ! ||
+								(L.L.timetable_run) 0 = &&
+									{if}
+										0 999 random (S.L.timetable_run)
+									{endif}
+							{endif}
+							
+' ########################################################################################################################################################################			
+'					SATURDAY
+' ########################################################################################################################################################################
+						(L.L.wochentag) 6 =
+							{if}
+								(M.V.GetTTLineString) "81" $=	
+									{if}
+										1 (M.V.GetTTBusstopName) "Quail Valley Loop 1" $= 1 (M.V.GetTTBusstopName) "Sheppard Stn 1" $= || {if} 01 (S.L.timetable_run) {endif}
+									{endif}
+									
+								(M.V.GetTTLineString) "81" $= !
+								(L.L.timetable_run) 0 = &&
+									{if}
+										0 999 random (S.L.timetable_run)
+									{endif}
+							{endif}
+' ########################################################################################################################################################################			
+'					SUNDAY
+' ########################################################################################################################################################################
+						(L.L.wochentag) 0 =
+							{if}
+								(M.V.GetTTLineString) "56" $=	
+									{if}
+										0 (M.V.GetTTBusstopName) "Tyrell Avenue 1" $= 25 (M.V.GetTTBusstopName) "Tyrell Avenue 1" $= || {if} 05 (S.L.timetable_run) {endif}
+										0 (M.V.GetTTBusstopName) "Tyrell Avenue 2" $= 25 (M.V.GetTTBusstopName) "Tyrell Avenue 2" $= || {if} 06 (S.L.timetable_run) {endif}
+										0 (M.V.GetTTBusstopName) "Tyrell Avenue 3" $= 25 (M.V.GetTTBusstopName) "Tyrell Avenue 3" $= || {if} 07 (S.L.timetable_run) {endif}
+									{endif}
+								(M.V.GetTTLineString) "81" $=	
+									{if}
+										1 (M.V.GetTTBusstopName) "Quail Valley Loop 1" $= {if} 01 (S.L.timetable_run) {endif}
+										1 (M.V.GetTTBusstopName) "Quail Valley Loop 2" $= {if} 02 (S.L.timetable_run) {endif}
+										1 (M.V.GetTTBusstopName) "Quail Valley Loop 3" $= {if} 03 (S.L.timetable_run) {endif}
+									{endif}
+									
+								(M.V.GetTTLineString) "81" $= !
+								(L.L.timetable_run) 0 = &&
+									{if}
+										0 999 random (S.L.timetable_run)
+									{endif}
+							{endif}
+
+
+						(L.L.wochentag) 6 >
+							{if}
+								0 999 random (S.L.timetable_run)
+							{endif}
+						{else}
+							0 (S.L.timetable_run)
+						{endif}
+' ########################################################################################################################################################################
+					{else}
+						(L.L.schedule_active)
+							{if}
+								0 999 random (S.L.timetable_run)
+							{else}
+								0 (S.L.timetable_run)
+							{endif}
+					{endif}
+				0 (S.L.timetable_findrun)
+				1 (S.L.AI_init)
+			{endif}
+
+' ########################################################################################################################################################################
+
+
+	(L.L.elec_busbar_main) (L.L.globaltimer) (L.L.cockpit_schluesselzeit) 2 + > (L.L.clever_on) || && (L.L.elec_stillon) || 
+		{if}
+			1 (S.L.clever_on) 
+		{else}
+			0 (S.L.clever_on) 
+		{endif}
+				
+
+' ######### WENN AN ##########
+	(L.L.clever_on)	
+	
+		{if}
+		(T.L.system_operational)
+		
+		(L.L.clever_LED_mode) s0
+		
+		l0 0 =
+			{if}
+				(M.V.GetTTBusstopIndex) (L.L.clever_stop) >=
+					{if}
+						(L.L.clever_stop_display) (M.V.GetTTBusstopName) (M.V.GetBusstopIndex) 1 (M.V.GetBusstopString) (S.$.clever_LED_stopname)
+					{endif}
+
+				(L.$.clever_LED_stopname) (S.$.clever_LED)
+			{endif}	
+			
+		l0 1 =
+			{if}
+				"STOP REQUESTED" (S.$.clever_LED)
+			{endif}	
+			
+		l0 2 =
+			{if}
+				"" (L.S.Time)
+				(L.S.Time) 46800 <
+					{if}
+						(L.S.Time) 3600 <
+							{if}
+								(L.S.Time) 3600 / 12 + s0 trunc s1 "02" $IntToStrEnh $+ ":" $+ 
+								l0 l1 - 60 * s0 trunc s1 "02" $IntToStrEnh $+ " AM" $+
+							{else}
+								(L.S.Time) 43200 >
+								{if}
+									(L.S.Time) 3600 / s0 trunc s1 "02" $IntToStrEnh $+ ":" $+ 
+									l0 l1 - 60 * s0 trunc s1 "02" $IntToStrEnh $+ " PM" $+
+								{else}
+									(L.S.Time) 3600 / s0 trunc s1 "02" $IntToStrEnh $+ ":" $+ 
+									l0 l1 - 60 * s0 trunc s1 "02" $IntToStrEnh $+ " AM" $+
+								{endif}
+							{endif}
+					{else}
+						(L.S.Time) 43200 - 3600 / s0 trunc s1 "02" $IntToStrEnh $+ ":" $+ 
+						l0 l1 - 60 * s0 trunc s1 "02" $IntToStrEnh $+ " PM" $+
+					{endif}
+				
+				(S.$.clever_LED)
+			{endif}	
+			
+		10 3 =
+			{if}
+				"OP ID - 73641" (S.$.clever_LED)
+				
+				(L.L.op_id) 0 =
+					{if}
+						(T.L.op_id)
+						1 (S.L.op_id)
+					{endif}
+			{endif}
+	
+		(L.L.clever_LED_time) (L.S.Timegap) + (S.L.clever_LED_time)
+		
+		(L.L.clever_run_active) !
+		(L.L.haltewunschlampe) ! &&
+			{if}
+				0 (S.L.clever_LED_time) 
+				3 (S.L.clever_LED_mode)
+			{endif}
+		
+		(L.L.clever_LED_time)
+		(C.L.display_change_sec) >
+			{if}
+				"" (S.$.clever_LED)
+				(L.L.clever_LED_time) (C.L.display_change_sec) - (C.L.display_black_sec) >
+					{if}
+						
+						(L.L.clever_LED_mode) s0
+						
+						l0 0 = 
+							{if}
+							
+								(L.L.haltewunschlampe) 
+									{if}
+										1 (S.L.clever_LED_mode)
+									{else}	
+										0 (S.L.clever_LED_mode)
+									{endif}
+								
+							{endif}
+							
+						l0 1 = 
+							{if}	
+								0 (S.L.clever_LED_mode)
+							{endif}
+							
+						l0 2 = 
+							{if}	
+								3 (S.L.clever_LED_mode)
+							{endif}	
+							
+						10 3 = 
+							{if}	
+								0 (S.L.clever_LED_mode)
+							{endif}	
+							
+					
+						0 (S.L.clever_LED_time)	
+					{endif}				
+			{endif}
+			
+		(L.L.clever_run_active) !
+		(L.L.clever_LED_mode) 1 > &&
+			{if}
+				0 (S.L.clever_LED_mode)
+			{endif}
+		
+		
+' ######### DAUERANZEIGE LOW LINE ##########
+
+		(L.L.AI) !
+			{if}
+				(L.L.Cabinair_Temp) 1.8 * 32 + " 2" $IntToStrEnh "%F IN " $+
+				(L.S.Weather_Temperature) 1.8 * 32 + " 2" $IntToStrEnh $+ "%F EXT " $+ 
+				"        " $+
+				
+				(L.L.clever_int_dest) 0 (M.V.GetTerminusString) $+
+
+				46 $SetLengthL 				
+				(S.$.clever_lowline)		
+
+				1 (S.L.Refresh_Strings)
+			{endif}
+			
+' ######### MENU SCREENS ##########		
+
+		(L.L.clever_screen) s0
+		
+'		0 = LOG IN ID
+		l0 0 =
+			{if}
+
+				1 (S.L.clever_vis_enter) (S.L.clever_vis_logID) (S.L.clever_vis_loginput)
+				0 (S.L.clever_vis_runlinedest) (S.L.clever_vis_log) (S.L.clever_vis_logPIN) (S.L.clever_vis_rt)
+				"" (S.$.clever_midline) (S.$.clever_upline)
+				4 (S.L.clever_input_max)
+								
+			{endif}
+			
+			
+'		1 = LOG IN PIN	
+		l0 1 = 
+			{if}
+			
+				1 (S.L.clever_vis_enter) (S.L.clever_vis_logPIN) (S.L.clever_vis_loginput)
+				0 (S.L.clever_vis_runlinedest) (S.L.clever_vis_log) (S.L.clever_vis_logID) (S.L.clever_vis_rt)
+				"" (S.$.clever_midline) (S.$.clever_upline)
+				4 (S.L.clever_input_max)
+			
+			{endif}
+
+
+'		2 =  LOG IN ERROR			
+		l0 2 =
+			{if}
+			
+				0 (S.L.clever_input_max) (S.L.clever_vis_enter) (S.L.clever_vis_logPIN) (S.L.clever_vis_logID) (S.L.clever_vis_loginput) (S.L.clever_vis_runlinedest) (S.L.clever_vis_log) (S.L.clever_vis_rt)
+				"" (S.$.clever_midline) (S.$.clever_upline) (S.$.clever_lowline)
+				
+				(L.L.clever_timer) (L.S.Timegap) + (S.L.clever_timer) 
+					1 >
+						{if} 
+							(L.L.clever_prev_screen) (S.L.clever_screen)
+							0 (S.L.clever_timer)
+							2 (S.L.clever_prev_screen)
+						{endif}
+
+			{endif}
+			
+
+'		3 = SUCCESS			
+		l0 3 =
+			{if}
+			
+				0 (S.L.clever_input_max) (S.L.clever_vis_enter) (S.L.clever_vis_logPIN) (S.L.clever_vis_logID) (S.L.clever_vis_loginput) (S.L.clever_vis_runlinedest) (S.L.clever_vis_log) (S.L.clever_vis_rt)
+				"" (S.$.clever_midline) (S.$.clever_upline) (S.$.clever_lowline)
+				
+				(L.L.clever_timer) (L.S.Timegap) + (S.L.clever_timer) 
+					1 >
+						{if} 
+							(L.L.clever_prev_screen) 0 = {if} 1 (S.L.clever_screen) {endif}
+							(L.L.clever_prev_screen) 1 = {if} 4 (S.L.clever_screen) 1 (S.L.clever_logged_in) {endif}
+							0 (S.L.clever_timer)
+							2 (S.L.clever_prev_screen)
+						{endif}
+
+			{endif}
+
+
+
+'		4 = MAIN SCREEN		
+		l0 4 =
+			{if}	
+
+'				AUFRUF RUN-MENU WENN BEREITS EINGEGEBEN			
+				(L.L.clever_int_run) (L.L.schedule_active) && (L.L.clever_run_active) ! &&
+					{if}
+						5 (S.L.clever_screen)				
+						4 (S.L.clever_prev_screen)
+						(L.L.clever_int_run) (L.L.timetable_run) =
+							{if}
+								"K" (L.L.clever_int_run) s0 0 > {if} l0 $IntToStr $+ {endif} (S.$.clever_input)
+							{else}
+								"" (S.$.clever_input) 0 (S.L.clever_int_run)
+							{endif}
+					{endif}	
+			
+'				VARIABLE CLEVER_VIS_RUN: 0 = Keine Info 1 = Kein Run 2 = Kein Schedule 3 = On Route 4 = Last Stop
+				
+				(L.L.clever_int_run) ! (L.L.clever_run_active) ! ||
+					{if}	
+					
+'					WENN KEIN RUN AKTIVIERT:
+				
+						(L.L.clever_int_run) !
+							{if}
+								1 (S.L.clever_vis_run)								
+							{else}
+								2 (S.L.clever_vis_run)
+							{endif}
+					
+						0 (S.L.clever_run_active)
+						
+						"" (S.$.clever_midline)	
+				
+						"" 46 $SetLengthL "@" $+
+						"" 46 $SetLengthL $+		 				
+						(S.$.clever_upline)
+						
+						0 (S.L.clever_vis_rt)
+						0 (S.L.clever_init_run)
+						
+					{else}
+					
+'					WENN RUN AKTIVIERT:			
+
+'						OHNE FAHRPLAN:		
+
+						(L.L.schedule_active) !
+							{if}
+							
+								2 (S.L.clever_vis_run)
+								
+								(L.L.chicago)
+									{if}
+										"                          " "Kedzie Run: K" $+ (L.L.clever_int_run) " 3" $IntToStrEnh $+ 46 $SetLengthL "@" $+
+									{else}
+										"                          " (L.$.Yard) $+ 35 $SetLengthL ": K" $+ (L.L.clever_int_run) " 3" $IntToStrEnh $+ 46 $SetLengthL "@" $+
+									{endif}
+								"                          " $+ "             " 46 $SetLengthL $+		 				
+								(S.$.clever_upline)
+								
+								0 (S.L.clever_init_run) 
+								0 (S.L.clever_vis_rt)
+								
+							{else}
+							
+'							FAHRPLAN AKTIV:								
+							
+							(L.L.clever_init_run) (L.L.clever_finalstop) ! &&
+								{if}
+
+'									NEUE FAHRT INITIALISIEREN ----------------------------------------------------------------------------------------------------------------------------------
+								
+									(M.V.GetTTLineString) (S.$.clever_string_line)									
+									(M.V.GetTTTerminusIndex) (S.L.clever_int_dest)
+									(M.V.GetTTBusstopCount) (S.L.clever_stopno)
+									(M.V.GetTTBusstopIndex) (S.L.clever_stop) (S.L.clever_stop_display) 1 - 0 max (S.L.clever_laststop)
+									0 (S.L.clever_init_run)
+'									(L.L.matrix_timer_zero) (S.L.matrix_timer) 0 (S.L.matrix_flip) (S.L.matrix_page)
+									
+								{else}
+								
+									(L.L.clever_finalstop) !
+									{if}
+'									WAEHREND DER FAHRT ------------------------------------------------------------------------------------------------------------------	
+						
+									(L.L.clever_stop) (M.V.GetTTBusstopIndex) = !
+									(M.V.GetTTBusstopIndex) 1 > (M.V.GetTTBusstopIndex) (M.V.GetTTBusstopName) (M.V.GetTTBusstopIndex) 1 - (M.V.GetTTBusstopName) $= ! || &&
+										{if}
+											(M.V.GetTTBusstopIndex) (S.L.clever_stop)
+											(M.L.announce_pre)
+										{endif}										
+										
+										3 (S.L.clever_vis_run)
+									{endif}
+									
+'									IMMER ------------------------------------------------------------------------------------------------------------------									
+									(M.V.GetTTDelay) -60 > (M.V.GetTTDelay) 60 < ||
+										{if}
+											0 (S.L.clever_delaystat)
+										{endif}
+											
+									(M.V.GetTTDelay) -60 <=
+										{if}
+											-1 (S.L.clever_delaystat)
+										{endif}
+										
+									(M.V.GetTTDelay) 60 >=
+										{if}
+											1 (S.L.clever_delaystat)
+										{endif}
+
+									
+									(L.L.chicago)
+										{if}
+											"                          " "Kedzie Run: K" $+ (L.L.clever_int_run) " 3" $IntToStrEnh $+ 46 $SetLengthL "@" $+
+										{else}
+											"                          " (L.$.Yard) $+ 35 $SetLengthL ": K" $+ (L.L.clever_int_run) " 3" $IntToStrEnh $+ 46 $SetLengthL "@" $+
+										{endif}
+
+									"                   " $+
+									
+									(L.L.clever_delaystat) 0 =
+										{if}
+											"Schd 0        " $+ (S.$.clever_upline)
+										{endif}
+								
+									(L.L.clever_delaystat) -1 =
+										{if}
+											"Schd Early " $+ (M.V.GetTTDelay) 60 / abs " 2" $IntToStrEnh $+ (S.$.clever_upline)
+										{endif}
+										
+									(L.L.clever_delaystat) 1 =
+										{if}
+											"Schd Late  " $+ (M.V.GetTTDelay) 60 / " 2" $IntToStrEnh $+ (S.$.clever_upline)
+										{endif}		
+									
+									(M.V.GetTTBusstopIndex) (L.L.clever_stop) >=
+										{if}
+											(L.L.clever_stop_display) (M.V.GetTTBusstopName) (M.V.GetBusstopIndex) 0 (M.V.GetBusstopString) (S.$.clever_midline_stopname)
+										{endif}
+									
+									(L.$.clever_midline_stopname) (S.$.clever_midline)									
+									
+'									TERMINUS --------------------------------------------------------------------------------------------------------------------------------------------------
+									
+									(M.V.GetTTBusstopCount) 1 - (M.V.GetTTBusstopIndex) =
+										{if}
+											4 (S.L.clever_vis_run)
+											1 (S.L.clever_finalstop)
+										{endif}
+										
+									(L.L.clever_finalstop) (L.L.door_0) 0 > (L.L.door_2) 0 > (L.L.bremse_feststell) || || &&
+										{if}
+											(L.L.clever_finalstop_timer) (L.S.Timegap) + (S.L.clever_finalstop_timer)
+										{else}
+											0 (S.L.clever_finalstop_timer)
+										{endif}
+										
+									(M.V.GetTTBusstopIndex) 1 < (L.L.clever_stop) 0 >= &&
+									(L.L.clever_laststop) (L.L.clever_stop) > (M.V.GetTTDelay) -60 > && ||
+										{if}
+											1 (S.L.clever_init_run)
+										{endif}
+										
+									(M.V.GetTTBusstopIndex) 0 =
+									(M.V.GetTTBusstopIndex) (L.L.clever_stop) < ||
+									(M.V.GetTTTerminusIndex) (L.L.clever_int_dest) = ||
+									(M.V.GetTTDelay) -360 > (L.L.clever_finalstop_timer) 0.05 > && &&
+									(L.L.globaltimer) 5 < ||
+									(L.L.clever_int_dest) 0 < (L.L.clever_run_active) && ||
+										{if}
+											0 (S.L.clever_finalstop)
+										{endif}										
+												
+'									ANZEIGEFELDER ---------------------------------------------------------------------------------------------------------------------------------------------
+
+										(L.L.clever_int_line) trunc 124 = {if} 1 (S.L.clever_vis_rt) {endif}
+										(L.L.clever_int_line) trunc 130 = {if} 2 (S.L.clever_vis_rt) {endif}
+										(L.L.clever_int_line) trunc 81 = {if} 2 (S.L.clever_vis_rt) {endif}
+							
+								{endif}							
+							
+							{endif}					
+					
+					{endif}
+			
+				0 (S.L.clever_input_max) (S.L.clever_vis_enter) (S.L.clever_vis_logPIN) (S.L.clever_vis_logID) (S.L.clever_vis_loginput)
+				1 (S.L.clever_vis_runlinedest) 2 (S.L.clever_vis_log)
+				
+			{else}
+			
+				0 (S.L.clever_vis_run) (S.L.clever_vis_rt)
+				
+			{endif}	
+			
+'		5 = RUN ENTRY
+		l0 5 =
+			{if}	
+				
+				(L.L.clever_int_run) 0 > 
+				(L.$.clever_input) $length 0 = &&
+					{if}
+						(L.L.clever_int_run) $IntToStr (S.$.clever_input)
+					{else}
+						(L.$.clever_input) $length 0 =
+							{if}
+								"K" (S.$.clever_input)
+							{endif}
+					{endif}
+				
+				4 (S.L.clever_input_max)
+				1 (S.L.clever_vis_enter) (S.L.clever_vis_loginput) 
+				0 (S.L.clever_vis_log) (S.L.clever_vis_logPIN) (S.L.clever_vis_logID) (S.L.clever_vis_runlinedest) (S.L.clever_vis_rt)
+				"" (S.$.clever_midline) (S.$.clever_upline)
+			{endif}	
+
+'		6 = LINE ENTRY	
+		l0 6 =
+			{if}	
+			
+				(L.L.clever_int_line) 0 > 
+				(L.$.clever_input) $length 0 = &&
+					{if}
+						(L.L.clever_int_line) $IntToStr (S.$.clever_input)
+					{endif}
+				
+				6 (S.L.clever_input_max) 
+				1 (S.L.clever_vis_enter) (S.L.clever_vis_loginput)
+				0 (S.L.clever_vis_log) (S.L.clever_vis_logPIN) (S.L.clever_vis_logID) (S.L.clever_vis_runlinedest) (S.L.clever_vis_rt)
+				"" (S.$.clever_midline) (S.$.clever_upline)
+			{endif}		
+
+'		7 = DEST ENTRY	
+		l0 7 =
+			{if}	
+			
+				(L.L.clever_int_dest) 0 > 
+				(L.$.clever_input) $length 0 = &&
+					{if}
+						(L.L.clever_int_dest) $IntToStr (S.$.clever_input)
+					{endif}
+			
+				6 (S.L.clever_input_max) 
+				1 (S.L.clever_vis_enter) (S.L.clever_vis_loginput)
+				0 (S.L.clever_vis_log) (S.L.clever_vis_logPIN) (S.L.clever_vis_logID) (S.L.clever_vis_runlinedest) (S.L.clever_vis_rt)
+				"" (S.$.clever_midline) (S.$.clever_upline)
+			{endif}	
+
+'		8 =  RUN SCHED ERROR			
+		l0 8 =
+			{if}
+			
+				0 (S.L.clever_input_max) (S.L.clever_vis_enter) (S.L.clever_vis_logPIN) (S.L.clever_vis_logID) (S.L.clever_vis_loginput) (S.L.clever_vis_runlinedest) (S.L.clever_vis_log) (S.L.clever_vis_rt)
+				"" (S.$.clever_midline) (S.$.clever_upline) (S.$.clever_lowline)
+				
+				(L.L.clever_timer) (L.S.Timegap) + (S.L.clever_timer) 
+					1 >
+						{if} 
+							(L.L.clever_prev_screen) (S.L.clever_screen)
+							0 (S.L.clever_timer)
+							8 (S.L.clever_prev_screen)
+							(T.L.ev_clever_key)
+						{endif}
+
+			{endif}			
+
+'		9 =  JOHNS ANNOUNCEMENT MOD			
+		l0 9 =
+			{if}
+			
+				0 (S.L.clever_vis_runlinedest) (S.L.clever_vis_log) (S.L.clever_vis_rt)
+				"ANNOUNCEMENTS MODE" (S.$.clever_upline)
+				"PAGE 1 of 1" (S.$.clever_midline)
+				"" (S.$.clever_lowline)
+			{endif}	
+
+'		10 =  JOHNS INTERCOM MOD			
+		l0 10 =
+			{if}
+			
+				0 (S.L.clever_vis_runlinedest) (S.L.clever_vis_log) (S.L.clever_vis_rt)
+				"INTERCOM MODE" (S.$.clever_upline)
+				"PAGE 1 of 1" (S.$.clever_midline)
+				"" (S.$.clever_lowline)
+				
+				(L.L.clever_timer) (L.S.Timegap) + (S.L.clever_timer) 
+					45 >
+						{if} 
+							(L.L.clever_prev_screen) (S.L.clever_screen)
+							0 (S.L.clever_timer)
+							10 (S.L.clever_prev_screen)
+							(T.L.ev_clever_key_confirm)
+						{endif}
+
+			{endif}	
+
+'		11 =  JOHNS PR MOD			
+		l0 11 =
+			{if}
+			
+				0 (S.L.clever_vis_runlinedest) (S.L.clever_vis_log) (S.L.clever_vis_rt)
+				"PR MESSAGES" (S.$.clever_upline)
+				"PAGE 1 of 1" (S.$.clever_midline)
+				"" (S.$.clever_lowline)
+				
+				(L.L.clever_timer) (L.S.Timegap) + (S.L.clever_timer) 
+					45 >
+						{if} 
+							(L.L.clever_prev_screen) (S.L.clever_screen)
+							0 (S.L.clever_timer)
+							11 (S.L.clever_prev_screen)
+							(T.L.ev_clever_key_confirm)
+						{endif}
+
+			{endif}	
+	
+' ######### delay ##########
+
+		(M.V.GetTTDelay) 300 <
+			{if}
+			(L.L.clever_init_run) ! (L.L.clever_finalstop) ! &&
+				{if}
+					(L.L.clever_timer) (L.S.Timegap) + (S.L.clever_timer) 
+					60 >
+						{if}
+							(L.L.schedule_active)
+							{if}
+								11 (S.L.clever_screen)				
+								4 (S.L.clever_prev_screen)
+								(T.L.ev_clever_key_confirm)
+							{endif}
+						{endif}
+					0 (S.L.clever_timer)
+				{endif}
+			{endif}
+
+' ######### WENN EINGELOGGT ##########		
+		(L.L.clever_logged_in)
+			{if}		
+			
+
+' ######### WENN NICHT EINGELOGGT ##########						
+			{else}
+
+'			WENN NICHT MEHR EINGELOGGT, ZURUECK ZUM START			
+				(L.L.clever_screen) 3 >
+					{if}
+						0 (S.L.clever_screen)	
+					{endif}
+			
+			{endif}
+
+' ######### WENN AUS ##########			
+		{else}		
+		
+			(L.L.clever_S_tex) 0 >= {if} 0 (S.L.clever_S_tex) {endif} 0 (S.L.clever_vis_log) (S.L.clever_vis_runlinedest) (S.L.clever_vis_enter) (S.L.clever_timer) (S.L.clever_screen) (S.L.clever_prev_screen) (S.L.clever_logged_in) 
+			(S.L.clever_vis_back) (S.L.clever_vis_rt) (S.L.clever_vis_logID) (S.L.clever_vis_logPIN) (S.L.clever_vis_loginput) (S.L.clever_vis_run)
+			"" (S.$.clever_midline) (S.$.clever_upline) (S.$.clever_lowline)
+			
+		{endif}
+		
+	(L.L.AI) ! (L.L.chicago) &&
+		{if}
+
+
+		
+' ######### UNTERES DISPLAY ##########
+				(L.L.Display_Tex) 0 > (L.L.clever_S_tex) 5 < && (L.L.chicago) &&
+					{if}
+						(L.L.Display_Tex) (S.L.clever_S_tex)
+						0 (S.L.clever_lowdisplay_timer)
+						"" (S.$.clever_low_string)
+					{endif}	
+					
+				(L.L.clever_S_tex) 1 =
+					{if}
+						(L.L.clever_logged_in) !
+							{if}
+								"@LOCKED" (S.$.clever_low_string)
+							{else}
+								(L.L.clever_run_active)
+								{if}
+								(M.V.GetTTDelay) $IntToStr (S.$.clever_low_string)
+								{else}
+								"@IN SERVICE" (S.$.clever_low_string)
+								{endif}
+							{endif}		
+					{endif}
+
+'				Anzeige Fare Override					
+				(L.L.clever_lowdisplay_but1) (L.L.clever_S_tex) 1 = && (L.L.fb_display) 0 > &&
+					{if}
+						5 (S.L.clever_S_tex)
+						"@OVERRIDE CONFIRMED" (S.$.clever_low_string)
+						1 (S.L.clever_override_fare)
+					{endif}
+				
+				(L.L.clever_S_tex) 5 =
+					{if}
+						(L.L.clever_lowdisplay_timer) (L.S.Timegap) + (S.L.clever_lowdisplay_timer)
+						(C.L.lowdisplay_change_sec) >
+							{if}
+								1 (S.L.clever_S_tex)
+							{endif}
+					{endif}
+					
+'				Anzeige Balance Check				
+				(L.L.clever_lowdisplay_but2) (L.L.clever_S_tex) 1 = &&
+					{if}
+						5 (S.L.clever_S_tex)
+						"CURRENT BALANCE@USD " (L.L.Income) s0 trunc s1 $IntToStr $+ "." $+ l0 l1 - "02" $IntToStrEnh $+ (S.$.clever_low_string)
+					{endif}
+				
+				(L.L.clever_S_tex) 5 =
+					{if}
+						(L.L.clever_lowdisplay_timer) (L.S.Timegap) + (S.L.clever_lowdisplay_timer)
+						(C.L.lowdisplay_change_sec) >
+							{if}
+								1 (S.L.clever_S_tex)
+							{endif}
+					{endif}				
+		{endif}
+		
+'	DEBUG
+
+	(L.L.clever_run_active) !
+		{if}
+			0 (S.L.clever_stop) (S.L.clever_laststop) (S.L.clever_stopno)
+			(T.L.system_paused)
+		{endif}
+		
+	(L.$.Matrix_TerminusL3) $length
+	(L.$.Matrix_TerminusL4) $length + 0 >
+		{if}
+			1 (S.L.matrix_flip)
+		{else}
+			0 (S.L.matrix_flip) (S.L.matrix_page)
+		{endif}
+		
+	(L.L.clever_stop_display) (M.V.GetTTBusstopIndex) 1 + >
+		{if}
+			(M.V.GetTTBusstopIndex) (S.L.clever_stop_display) 
+		{endif}
+		
+{end}
+
+{macro:announce_pre}
+	(L.L.globaltimer) (S.L.announce_pre_time)
+{end}
+
+{macro:announce_call}
+	(L.L.AI) !
+	{if}
+			"..\..\Announcements\" 
+			0 (M.V.GetDepotStringGlobal) $+						
+			"\" $+ 
+			(L.L.clever_stop) (M.V.GetTTBusstopName) $+
+			".wav" $+ 
+			$msg (T.F.ev_EFAD_ansage)
+	{endif}
+{end}
+
+{macro:announce_trig}
+	(L.L.AI) !
+	{if}
+			(M.V.GetTTBusstopIndex) (L.L.clever_stop) >=
+				{if}
+					(L.L.clever_stop_display) (M.V.GetTTBusstopName) (M.V.GetBusstopIndex) 1 (M.V.GetBusstopString) (S.$.clever_LED_stopname)
+				{endif}
+
+			(L.$.clever_LED_stopname) (S.$.clever_LED)
+	{endif}
+{end}
