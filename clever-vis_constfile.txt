@@ -28,7 +28,7 @@ display_change_sec
 
 [const]
 display_black_sec
-5
+4
 
 [const]
 lowdisplay_change_sec
