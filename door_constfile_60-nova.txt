@@ -41,7 +41,7 @@ door_handrampe_height
 doors_maxvspeed
 4
 	
-	Front/Back Door Acceleration (100%/s²)
+	Front/Back Door Acceleration (100%/sÂ²)
 
 [const]
 door0_acc
@@ -67,7 +67,7 @@ door4_acc
 door5_acc
 2
 
-	Door Acceleration Variation (100%/s²)
+	Door Acceleration Variation (100%/sÂ²)
 
 [const]
 door_acc_var
@@ -151,7 +151,7 @@ door_first
 1
 
 
-		Dämpferkennlinie über Öffnungzustand:
+		DÃ¤mpferkennlinie Ã¼ber Ã–ffnungzustand:
 
 [newcurve]
 damper_f_close
@@ -205,7 +205,7 @@ door_refl
 
 [const]
 doorAftOpenTime
-1
+3
 
 	Busstop Brake will only be activated below MaxKMH:
 
