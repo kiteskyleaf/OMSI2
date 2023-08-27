@@ -57,7 +57,7 @@ stringcount_busstop
 	66	15 Stouffville - Main	STOUFFVILLE	STOUFFVILLE	to MAIN ST			15	15-WBMAIN	15
 	65	15 Stouffville - Millard	STOUFFVILLE	STOUFFVILLE	to MILLARD ST			15	15-EB
 	66	15 Stouffville - Yonge	STOUFFVILLE	STOUFFVILLE	to YONGE ST			15	15-WB
-	30	16 16th Avenue EB	16TH AVE	16TH AVENUE	to M-S HOSPITAL			16	16-EB
+	30	16 16th Avenue EB	16TH AVE	16TH AVENUE	to CORNELL BUS TERMINAL			16	16-EB
 	31	16 16th Avenue WB	16TH AVE	16TH AVENUE	to BATHURST ST			16	16-WB
 	32	18 Bur Oak EB	BUR OAK	BUR  O A K	to M-S HOSPITAL			18	18-EB
 	34	18 Bur Oak WB	BUR OAK	BUR  O A K	to ANGUS GLEN C.C.			18	18-WB
@@ -196,7 +196,7 @@ stringcount_busstop
 													
 	[infosystem_trip]												
 	{routecode} (z.B. '540001', integer)												
-	{routestring} (ggf. f¸r IBIS-Ger‰t oder vieleicht sp‰ter auch zum Setzen)												
+	{routestring} (ggf. f√ºr IBIS-Ger√§t oder vieleicht sp√§ter auch zum Setzen)												
 	{terminuscode}												
 	{line string} (z.B. '54 ')												
 													
