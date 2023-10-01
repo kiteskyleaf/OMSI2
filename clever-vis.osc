@@ -543,6 +543,7 @@
 				
 '			RESET WHEN DEPARTING
 			(L.L.doorTarget_0) 0 = (L.L.ext_announce_seq) 1 > &&
+			(L.L.door_0) 0.1 > 
 				{if}
 					0 (S.L.ext_announce_seq) 0 (S.L.ext_announce_time) 0 (S.L.ext_announce_repeat)	 						
 				{endif}
@@ -825,6 +826,7 @@
 	(L.L.clever_on)	
 	
 		{if}
+		(L.L.AI) !
 		(T.L.system_operational)
 		
 		(L.L.clever_LED_mode) s0
