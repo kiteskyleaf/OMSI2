@@ -815,10 +815,11 @@
 
 
 	(L.L.elec_busbar_main) (L.L.globaltimer) (L.L.cockpit_schluesselzeit) 2 + > (L.L.clever_on) || && (L.L.elec_stillon) || 
+	(L.L.AI) !
 		{if}
 			1 (S.L.clever_on) 
 		{else}
-			0 (S.L.clever_on) 
+			0 (S.L.clever_off)
 		{endif}
 				
 
