@@ -1470,6 +1470,7 @@
 {end}
 
 {macro:announce_pre}
+	(L.L.AI) !
 	(L.L.globaltimer) (S.L.announce_pre_time)
 {end}
 
