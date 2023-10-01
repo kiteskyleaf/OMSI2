@@ -885,10 +885,10 @@
 			{if}
 				"OP ID - 73641" (S.$.clever_LED)
 				
-				(L.L.op_id) 0 =
+				(L.L.system_paused) 0 =
 					{if}
-						(T.L.op_id)
-						1 (S.L.op_id)
+						(T.L.system_paused)
+						1 (S.L.system_paused)
 					{endif}
 			{endif}
 	
