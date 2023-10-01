@@ -837,6 +837,13 @@
 					{endif}
 
 				(L.$.clever_LED_stopname) (S.$.clever_LED)
+			{else}
+				(M.V.GetTTBusstopIndex) (L.L.clever_stop) >=
+					{if}
+						(L.L.clever_stop_display) (M.V.GetTTBusstopName) (M.V.GetBusstopIndex) 2 (M.V.GetBusstopString) (S.$.clever_LED_stopname)
+					{endif}
+
+				(L.$.clever_LED_stopname) (S.$.clever_LED)
 			{endif}	
 			
 		l0 1 =
@@ -902,7 +909,6 @@
 						
 						l0 0 = 
 							{if}
-							
 								(L.L.haltewunschlampe) 
 									{if}
 										1 (S.L.clever_LED_mode)
